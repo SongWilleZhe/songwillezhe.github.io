@@ -1,4 +1,6 @@
+下面是完整代码，全部复制后替换 GitHub 上 `index.html` 的全部内容就行：
 
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,6 +44,7 @@
       font-size: 14px;
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
@@ -103,7 +106,7 @@
     /* HERO */
 
     .hero {
-    width: 100vw;
+      width: 100vw;
       margin-left: calc(50% - 50vw);
       margin-right: calc(50% - 50vw);
       padding: 125px max(40px, calc(50vw - 500px)) 110px;
@@ -121,11 +124,7 @@
       background-size: cover;
       background-position: right center;
       background-repeat: no-repeat;
-}
-
-body {
-  overflow-x: hidden;
- }
+    }
 
     .eyebrow {
       color: var(--green);
@@ -222,67 +221,56 @@ body {
       font-size: 13px;
     }
 
-   /* ABOUT */
+    /* ABOUT */
 
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 75px;
-  align-items: center;
-}
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
 
-.about-copy {
-  color: #727268;
-  font-size: 14px;
-  line-height: 2.2;
-}
+    .about-main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
 
-.about-copy p + p {
-  margin-top: 18px;
-}
+    .about-copy {
+      color: #727268;
+      font-size: 14px;
+      line-height: 2.2;
+    }
 
-.about-side {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+    .about-copy p + p {
+      margin-top: 18px;
+    }
 
-.about-image {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 6;
-  object-fit: cover;
-  object-position: center;
-}
+    .about-image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 6;
+      object-fit: cover;
+      object-position: center;
+    }
 
-.about-note {
-  padding: 30px;
-  background: var(--green-light);
-}
+    .about-note {
+      padding: 30px;
+      background: var(--green-light);
+    }
 
-.about-note h3 {
-  font-family: var(--serif);
-  font-size: 23px;
-  font-weight: normal;
-  margin-bottom: 15px;
-}
+    .about-note h3 {
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
 
-.about-note p {
-  color: #697163;
-  font-size: 13px;
-  line-height: 2;
-}
-
-@media (max-width: 700px) {
-  .about-layout {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .about-image {
-    max-height: 480px;
-  }
-}
+    .about-note p {
+      color: #697163;
+      font-size: 13px;
+      line-height: 2;
+    }
 
     /* JOURNAL */
 
@@ -525,7 +513,11 @@ body {
 
       .about-layout {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 35px;
+      }
+
+      .about-image {
+        max-height: 480px;
       }
 
       .journal-item {
@@ -583,7 +575,7 @@ body {
 
   <header>
     <div class="container navigation">
-      <a href="#" class="logo">Song Zhe </a>
+      <a href="#" class="logo">Song Zhe</a>
 
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About</a>
@@ -642,57 +634,63 @@ body {
         </div>
 
         <div class="about-layout">
-<div class="about-copy">
-  <p>
-    I'm Song Zhe, an Industrial Engineer with over
-    ten years of international experience in
-    manufacturing, production optimization and
-    operational excellence.
-  </p>
 
-  <p>
-    My professional journey has taken me through
-    different industries and countries. Working
-    with people from different backgrounds has
-    taught me to appreciate different perspectives
-    and ways of thinking.
-  </p>
+          <div class="about-main">
+            <div class="about-copy">
+              <p>
+                I'm Song Zhe, an Industrial Engineer with over
+                ten years of international experience in
+                manufacturing, production optimization and
+                operational excellence.
+              </p>
 
-  <p>
-    Outside work, I'm interested in languages,
-    literature, travel, photography, culture and
-    the endless possibilities of learning something new.
-  </p>
+              <p>
+                My professional journey has taken me through
+                different industries and countries. Working
+                with people from different backgrounds has
+                taught me to appreciate different perspectives
+                and ways of thinking.
+              </p>
 
-  <p>
-    I created this website to have a place of my own:
-    somewhere to document my journey, collect my thoughts
-    and share the things I find meaningful.
-  </p>
-</div>
+              <p>
+                Outside work, I'm interested in languages,
+                literature, travel, photography, culture and
+                the endless possibilities of learning something new.
+              </p>
 
-<div class="about-side">
-  <img
-    class="about-image"
-    src="/images/about.jpg"
-    alt="A portrait of me"
-    loading="lazy"
-  >
+              <p>
+                I created this website to have a place of my own:
+                somewhere to document my journey, collect my thoughts
+                and share the things I find meaningful.
+              </p>
+            </div>
 
-  <div class="about-note">
-    <h3>A few things about me</h3>
+            <div class="about-note">
+              <h3>A few things about me</h3>
 
-    <p>
-      Based in Japan, with an international outlook.
-      <br><br>
-      Interested in Germany, languages and different cultures.
-      <br><br>
-      Passionate about continuous improvement and lifelong learning.
-      <br><br>
-      Always curious about what comes next.
-    </p>
-  </div>
-</div>
+              <p>
+                Based in Japan, with an international outlook.
+                <br><br>
+                Interested in Germany, languages and different cultures.
+                <br><br>
+                Passionate about continuous improvement and lifelong learning.
+                <br><br>
+                Always curious about what comes next.
+              </p>
+            </div>
+          </div>
+
+          <img
+            class="about-image"
+            src="/images/about.jpg"
+            alt="A portrait of me"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+    </section>
 
 
     <!-- JOURNAL -->
@@ -922,3 +920,4 @@ body {
 
 </body>
 </html>
+```
