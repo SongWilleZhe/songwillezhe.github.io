@@ -1,6 +1,4 @@
-下面是完整代码，全部复制后替换 GitHub 上 `index.html` 的全部内容就行：
 
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +9,10 @@
   <meta name="description" content="A personal space for thoughts, experiences, professional work, travel and everyday life.">
   <meta name="author" content="Song Zhe">
   <meta name="theme-color" content="#f7f5ef">
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  
   <style>
     :root {
       --bg: #f7f5ef;
@@ -21,8 +22,8 @@
       --green: #77866e;
       --green-light: #e9ece4;
       --line: #e5e2d8;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: Arial, Helvetica, sans-serif;
+      --serif: "EB Garamond", Georgia, serif;
+      --sans: "Work Sans", Arial, sans-serif;
       --width: 1080px;
     }
 
@@ -139,7 +140,7 @@
       font-size: clamp(48px, 7vw, 82px);
       line-height: 1.12;
       font-weight: normal;
-      letter-spacing: -3px;
+      letter-spacing: -1px;
       margin-bottom: 30px;
     }
 
@@ -227,7 +228,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
-      align-items: start;
+      align-items: stretch;
     }
 
     .about-main {
@@ -249,9 +250,9 @@
     .about-image {
       display: block;
       width: 100%;
-      aspect-ratio: 4 / 6;
+      height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: top;
     }
 
     .about-note {
@@ -517,7 +518,8 @@
       }
 
       .about-image {
-        max-height: 480px;
+        height: auto;
+        aspect-ratio: 4 / 5;
       }
 
       .journal-item {
