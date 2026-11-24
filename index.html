@@ -103,22 +103,26 @@
     /* HERO */
 
     .hero {
-      padding: 125px 40px 110px;
-  max-width: 100%;
+     width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 125px max(40px, calc(50vw - 500px)) 110px;
   min-height: 530px;
   box-sizing: border-box;
-
   background-image:
     linear-gradient(
       rgba(247, 245, 239, 0.38),
       rgba(247, 245, 239, 0.52)
     ),
     url('/images/hero.jpg');
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-    }
+}
+
+body {
+  overflow-x: hidden;
+ }
 
     .eyebrow {
       color: var(--green);
