@@ -222,42 +222,67 @@ body {
       font-size: 13px;
     }
 
-    /* ABOUT */
+   /* ABOUT */
 
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 75px;
-      align-items: start;
-    }
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
 
-    .about-copy {
-      color: #727268;
-      font-size: 14px;
-      line-height: 2.2;
-    }
+.about-copy {
+  color: #727268;
+  font-size: 14px;
+  line-height: 2.2;
+}
 
-    .about-copy p + p {
-      margin-top: 18px;
-    }
+.about-copy p + p {
+  margin-top: 18px;
+}
 
-    .about-note {
-      padding: 30px;
-      background: var(--green-light);
-    }
+.about-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .about-note h3 {
-      font-family: var(--serif);
-      font-size: 23px;
-      font-weight: normal;
-      margin-bottom: 15px;
-    }
+.about-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 6;
+  object-fit: cover;
+  object-position: center;
+}
 
-    .about-note p {
-      color: #697163;
-      font-size: 13px;
-      line-height: 2;
-    }
+.about-note {
+  padding: 30px;
+  background: var(--green-light);
+}
+
+.about-note h3 {
+  font-family: var(--serif);
+  font-size: 23px;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.about-note p {
+  color: #697163;
+  font-size: 13px;
+  line-height: 2;
+}
+
+@media (max-width: 700px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-image {
+    max-height: 480px;
+  }
+}
 
     /* JOURNAL */
 
@@ -617,53 +642,57 @@ body {
         </div>
 
         <div class="about-layout">
+<div class="about-copy">
+  <p>
+    I'm Song Zhe, an Industrial Engineer with over
+    ten years of international experience in
+    manufacturing, production optimization and
+    operational excellence.
+  </p>
 
-          <div class="about-copy">
-            <p>
-              I'm Song Zhe, an Industrial Engineer with over
-              ten years of international experience in
-              manufacturing, production optimization and
-              operational excellence.
-            </p>
+  <p>
+    My professional journey has taken me through
+    different industries and countries. Working
+    with people from different backgrounds has
+    taught me to appreciate different perspectives
+    and ways of thinking.
+  </p>
 
-            <p>
-              My professional journey has taken me through
-              different industries and countries. Working
-              with people from different backgrounds has
-              taught me to appreciate different perspectives
-              and ways of thinking.
-            </p>
+  <p>
+    Outside work, I'm interested in languages,
+    literature, travel, photography, culture and
+    the endless possibilities of learning something new.
+  </p>
 
-            <p>
-              Outside work, I'm interested in languages,
-              literature, travel, photography, culture and
-              the endless possibilities of learning something new.
-            </p>
+  <p>
+    I created this website to have a place of my own:
+    somewhere to document my journey, collect my thoughts
+    and share the things I find meaningful.
+  </p>
+</div>
 
-            <p>
-              I created this website to have a place of my own:
-              somewhere to document my journey, collect my thoughts
-              and share the things I find meaningful.
-            </p>
-          </div>
+<div class="about-side">
+  <img
+    class="about-image"
+    src="/images/about.jpg"
+    alt="A portrait of me"
+    loading="lazy"
+  >
 
-          <div class="about-note">
-            <h3>A few things about me</h3>
+  <div class="about-note">
+    <h3>A few things about me</h3>
 
-            <p>
-              Based in Japan, with an international outlook.
-              <br><br>
-              Interested in Germany, languages and different cultures.
-              <br><br>
-              Passionate about continuous improvement and lifelong learning.
-              <br><br>
-              Always curious about what comes next.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <p>
+      Based in Japan, with an international outlook.
+      <br><br>
+      Interested in Germany, languages and different cultures.
+      <br><br>
+      Passionate about continuous improvement and lifelong learning.
+      <br><br>
+      Always curious about what comes next.
+    </p>
+  </div>
+</div>
 
 
     <!-- JOURNAL -->
