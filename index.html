@@ -103,21 +103,24 @@
     /* HERO */
 
     .hero {
-     width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding: 125px max(40px, calc(50vw - 500px)) 110px;
-  min-height: 530px;
-  box-sizing: border-box;
-  background-image:
-    linear-gradient(
-      rgba(247, 245, 239, 0.38),
-      rgba(247, 245, 239, 0.52)
-    ),
-    url('/images/hero.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    width: 100vw;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding: 125px max(40px, calc(50vw - 500px)) 110px;
+      min-height: 530px;
+      box-sizing: border-box;
+      background-image:
+        linear-gradient(
+          to right,
+          rgba(247, 245, 239, 0.95) 0%,
+          rgba(247, 245, 239, 0.88) 40%,
+          rgba(247, 245, 239, 0.55) 70%,
+          rgba(247, 245, 239, 0.25) 100%
+        ),
+        url('/images/hero.jpg');
+      background-size: cover;
+      background-position: right center;
+      background-repeat: no-repeat;
 }
 
 body {
@@ -148,7 +151,7 @@ body {
 
     .hero-description {
       max-width: 600px;
-      color: #77776d;
+      color: #4a4b43;
       font-size: 15px;
       line-height: 2.1;
     }
@@ -466,7 +469,13 @@ body {
       }
 
       .hero {
-        padding: 85px 0 75px;
+        padding: 85px 24px 75px;
+        background-image:
+          linear-gradient(
+            rgba(247, 245, 239, 0.88),
+            rgba(247, 245, 239, 0.88)
+          ),
+          url('/images/hero.jpg');
       }
 
       .hero h1 {
