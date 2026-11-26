@@ -230,6 +230,43 @@
       section.block { padding: 24px 0; }
       .post { padding: 14px 16px; }
     }
+
+    /* ===== 首页优化：简介 / 视频 ===== */
+    .highlights { background: #f4f6f8; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+    .highlights .facts { background: none; padding: 0; margin: 0 0 12px; }
+    .skills { list-style: none; display: flex; flex-wrap: wrap; gap: 2px 26px; font-size: 14px; font-weight: 500; }
+    .skills li::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--green);
+      margin-right: 8px; vertical-align: 0.12em; }
+    .contact { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+    .contact a.mail { color: #fff; background: var(--green); border-radius: 6px; padding: 6px 16px; font-weight: 500; }
+    .contact a.mail:hover { background: #084a8c; text-decoration: none; }
+    .contact > .wechat { color: var(--muted); font-size: 14px; margin: 0; }
+
+    .series { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 28px; align-items: center;
+      background: #f4f6f8; border-radius: 8px; padding: 18px; }
+    .series:hover { background: #eaf1f8; }
+    .series .video-cover { margin: 0; border-radius: 6px; overflow: hidden; }
+    .series-body h3 { font-size: 20px; font-weight: 600; margin-bottom: 6px; }
+    .series-desc { max-width: 640px; color: var(--muted); font-size: 14px; }
+    .episode { margin: 14px 0; font-weight: 500; }
+    .episode-no { font-family: "IBM Plex Mono", Consolas, monospace; color: var(--green); margin-right: 10px; }
+    .watch { display: inline-block; border: 1px solid var(--green); color: var(--green); border-radius: 6px;
+      padding: 4px 14px; font-size: 14px; font-weight: 500; }
+    .series-note { margin-top: 12px; color: var(--muted); font-size: 12px; }
+
+    @media (max-width: 700px) {
+      .highlights { padding: 14px 16px; }
+      .skills { flex-direction: column; }
+      .series { grid-template-columns: 110px minmax(0, 1fr); gap: 14px; padding: 12px; align-items: start; }
+      .series-body h3 { font-size: 17px; }
+      .series-desc { display: none; }
+      .episode { margin: 6px 0 10px; font-size: 13px; line-height: 1.5; }
+      .episode-no { margin-right: 6px; }
+    }
+    @media (max-width: 360px) {
+      .series { grid-template-columns: 90px minmax(0, 1fr); gap: 10px; }
+      .watch { padding: 3px 8px; font-size: 13px; white-space: nowrap; }
+    }
   </style>
   <script src="/lang.js"></script>
 </head>
@@ -270,23 +307,24 @@
             mit Erfahrung in China und Japan. Aus Kaizen, Lean-Denken und digitalen Werkzeugen
             entwickle ich bessere Arbeitsweisen.</p>
 
-          <div class="facts">
-            <div><strong>10+</strong><span lang="en">years in manufacturing</span><span lang="de">Jahre Fertigungsindustrie</span></div>
-            <div><strong>CN · JP</strong><span lang="en">experience in China &amp; Japan</span><span lang="de">Erfahrung in China &amp; Japan</span></div>
-            <div><strong>4 <span lang="en">languages</span><span lang="de">Sprachen</span></strong><span lang="en">Chinese, English, Japanese, German</span><span lang="de">Chinesisch, Englisch, Japanisch, Deutsch</span></div>
+          <div class="highlights">
+            <div class="facts">
+              <div><strong>10+</strong><span lang="en">years in manufacturing</span><span lang="de">Jahre Fertigungsindustrie</span></div>
+              <div><strong>CN · JP</strong><span lang="en">experience in China &amp; Japan</span><span lang="de">Erfahrung in China &amp; Japan</span></div>
+              <div><strong>4 <span lang="en">languages</span><span lang="de">Sprachen</span></strong><span lang="en">Chinese, English, Japanese, German</span><span lang="de">Chinesisch, Englisch, Japanisch, Deutsch</span></div>
+            </div>
+            <ul class="skills">
+              <li><span lang="en">Production Optimization</span><span lang="de">Produktionsoptimierung</span></li>
+              <li>Lean Management</li>
+              <li><span lang="en">Digitalization</span><span lang="de">Digitalisierung</span></li>
+              <li><span lang="en">International Collaboration</span><span lang="de">Internationale Zusammenarbeit</span></li>
+            </ul>
           </div>
 
-          <!-- 能力体系：一行简洁标题 -->
-          <p class="services-header">
-            <span lang="en">Production Optimization | Lean Management | Digitalization | International Collaboration</span>
-            <span lang="de">Produktionsoptimierung | Lean Management | Digitalisierung | Internationale Zusammenarbeit</span>
+          <p class="contact">
+            <a class="mail" href="mailto:martina_song@163.com">✉ martina_song@163.com</a>
+            <span class="wechat">WeChat: songzhe_martina</span>
           </p>
-
-       <p class="contact">
-  <span lang="en">Contact</span><span lang="de">Kontakt</span>: 
-  Email: <a href="mailto:martina_song@163.com">martina_song@163.com</a> | 
-  WeChat: songzhe_martina
-</p>
         </div>
       </div>
     </section>
@@ -332,19 +370,25 @@
     <!-- VIDEOS：每个系列一张卡片，首页最多 3 个。系列里的新视频加到系列页面。 -->
     <section class="block" id="videos">
       <h2>Videos</h2>
-      <div class="videos">
-        <a class="video" href="/journal/kaizen-in-2-minutes/">
-          <!-- 封面：把 j2nzTpOY-Ro 换成该系列第一个视频的 YouTube ID（两处） -->
-          <div class="video-cover">
-            <img src="https://i.ytimg.com/vi/j2nzTpOY-Ro/oardefault.jpg" alt=""
-                 onload="if (this.naturalWidth <= 120) { this.onload = null; this.src = 'https://i.ytimg.com/vi/j2nzTpOY-Ro/hqdefault.jpg'; }"
-                 onerror="this.onerror = null; this.src = 'https://i.ytimg.com/vi/j2nzTpOY-Ro/hqdefault.jpg';">
-            <span aria-hidden="true">▶</span>
-          </div>
+      <!-- 每个系列一个横向卡片。新系列：复制整个 <a class="series">…</a>。 -->
+      <a class="series" href="/journal/kaizen-in-2-minutes/">
+        <!-- 封面：把 j2nzTpOY-Ro 换成该系列第一个视频的 YouTube ID（两处） -->
+        <div class="video-cover">
+          <img src="https://i.ytimg.com/vi/j2nzTpOY-Ro/oardefault.jpg" alt=""
+               onload="if (this.naturalWidth <= 120) { this.onload = null; this.src = 'https://i.ytimg.com/vi/j2nzTpOY-Ro/hqdefault.jpg'; }"
+               onerror="this.onerror = null; this.src = 'https://i.ytimg.com/vi/j2nzTpOY-Ro/hqdefault.jpg';">
+          <span aria-hidden="true">▶</span>
+        </div>
+        <div class="series-body">
           <h3><span lang="en">Kaizen in 2 Minutes</span><span lang="de">Kaizen in 2 Minuten</span></h3>
-          <p><span lang="en">8 chapters</span><span lang="de">8 Kapitel</span> · English &amp; Deutsch</p>
-        </a>
-      </div>
+          <p class="series-desc" lang="en">Short, two-minute videos on Kaizen and the Toyota Production System — my own summaries and reflections, based on my reading and my work on the shop floor.</p>
+          <p class="series-desc" lang="de">Kurze Zwei-Minuten-Videos über Kaizen und das Toyota-Produktionssystem – meine eigenen Zusammenfassungen und Gedanken, basierend auf meiner Lektüre und meiner Arbeit in der Produktion.</p>
+          <p class="episode"><span class="episode-no">1.1</span>
+            <span lang="en">The Framework of the Toyota Production System</span><span lang="de">Das Grundgerüst des Toyota-Produktionssystems</span></p>
+          <span class="watch"><span lang="en">Watch now →</span><span lang="de">Jetzt ansehen →</span></span>
+          <p class="series-note"><span lang="en">More videos coming</span><span lang="de">Weitere Videos folgen</span> · English &amp; Deutsch</p>
+        </div>
+      </a>
     </section>
 
   </main>
