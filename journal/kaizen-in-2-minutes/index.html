@@ -187,6 +187,20 @@
         font-size: 18px;
       }
     }
+
+    /* ===== 与首页统一 ===== */
+    .series-meta { margin: 18px 0 32px; }
+    .series-meta > span { border: 0; border-radius: 6px; font-size: 12px; }
+    .chapter { margin-bottom: 36px; }
+    .chapter-number { font-family: "IBM Plex Mono", Consolas, monospace; font-size: 12px; margin-bottom: 10px; }
+    .video-list { border-top: 0; }
+    .video-item { border: 0; border-radius: 8px; background: #f4f6f8; padding: 16px 20px; margin-bottom: 12px; }
+    .video-item:hover { padding-left: 20px; background: #eaf1f8; }
+    .video-title { font-size: 18px; font-weight: 500; }
+    @media (max-width: 700px) {
+      .video-item, .video-item:hover { padding: 14px; }
+      .video-title { font-size: 16px; }
+    }
   </style>
 </head>
 
@@ -219,7 +233,7 @@
     </div>
 
     <div class="series-meta">
-      <span><span lang="en">8 chapters</span><span lang="de">8 Kapitel</span></span>
+      <span><span lang="en">More videos coming</span><span lang="de">Weitere Videos folgen</span></span>
       <span><span lang="en">~2 min each</span><span lang="de">je ca. 2 Min.</span></span>
     </div>
 
