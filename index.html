@@ -99,7 +99,45 @@
     .post:hover, .video:hover h3 { color: var(--green); }
     .post-date { color: var(--muted); font-size: 14px; }
     .all-link { display: block; border-top: 1px solid var(--line); padding-top: 10px; text-align: right; color: var(--green); font-size: 14px; }
+ /* ===== 新增：文章摘要与阅读全文 ===== */
+    .post-body { 
+      min-width: 0; 
+    }
+    .post-body h3 { 
+      margin-bottom: 4px; 
+    }
+    .post-body h3 a:hover { 
+      color: var(--green); 
+    }
 
+    /* 摘要样式：灰色、字变小 */
+    .post-excerpt {
+      color: #666; /* 或者用灰色变量 var(--muted) */
+      font-size: 13px; /* 字体缩小，你可以改成 12px 或 14px 自己微调 */
+      line-height: 1.6;
+      margin: 4px 0 10px;
+      
+      /* 自动限行：限制 3 行，多出部分显示省略号。不需要可删掉这 4 行 */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* 阅读全文样式 */
+    .read-more {
+      display: inline-block;
+      font-size: 13px; /* 字号略小 */
+      font-weight: 500;
+      color: var(--green);
+      border-bottom: 1px solid var(--green);
+      padding-bottom: 1px;
+      transition: opacity .2s;
+    }
+    .read-more:hover { 
+      opacity: .7; 
+    }
+    
     /* VIDEOS */
     .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(0, 170px)); gap: 18px; }
     .video-cover { position: relative; aspect-ratio: 9 / 16; background: #dde2d6; margin-bottom: 8px; }
