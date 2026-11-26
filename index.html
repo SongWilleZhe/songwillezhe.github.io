@@ -267,6 +267,14 @@
       .series { grid-template-columns: 90px minmax(0, 1fr); gap: 10px; }
       .watch { padding: 3px 8px; font-size: 13px; white-space: nowrap; }
     }
+
+    /* ===== 照片上下边缘与右侧文字对齐 ===== */
+    .about { align-items: stretch; }
+    .about .photo { position: relative; }
+    .about .photo img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none;
+      min-height: 0; aspect-ratio: auto; }
+    @media (min-width: 701px) { .about h2 { margin-top: -0.18em; } }
+    @media (max-width: 700px) { .about .photo { width: 180px; aspect-ratio: 4 / 5; } }
   </style>
   <script src="/lang.js"></script>
 </head>
@@ -296,7 +304,7 @@
     <!-- 个人品牌简介 -->
     <section class="block" id="about">
       <div class="about">
-       <img src="/images/about.jpg" alt="Portrait of Song Zhe" data-alt-de="Porträt von Song Zhe" style="width: 220px; height: 275px; object-fit: cover;">
+       <div class="photo"><img src="/images/about.jpg" alt="Portrait of Song Zhe" data-alt-de="Porträt von Song Zhe"></div>
         <div>
           <h2>Song Zhe</h2>
           <p class="role">Industrial Engineering · Kaizen</p>
