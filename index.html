@@ -289,8 +289,14 @@
       .post { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 12px; }
       .post-thumb { min-height: 0; aspect-ratio: 16 / 9; }
     }
+
+    /* ===== 页脚：联系方式 ===== */
+    .site-footer { margin-top: 24px; padding: 32px 6%; text-align: center; background: #f4f6f8; color: var(--muted); }
+    .footer-title { font-size: 20px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+    .footer-copy { margin-top: 18px; font-size: 12px; }
   </style>
   <script src="/lang.js"></script>
+  <script src="/copy.js"></script>
 </head>
 
 <body>
@@ -343,10 +349,7 @@
             </ul>
           </div>
 
-          <p class="contact">
-            <a class="mail" href="mailto:martina_song@163.com">✉ martina_song@163.com</a>
-            <span class="wechat">WeChat: songzhe_martina</span>
-          </p>
+          <div class="copy-row" data-copy-buttons></div>
         </div>
       </div>
     </section>
@@ -417,12 +420,10 @@
 
   </main>
  <!-- 页脚 -->
-  <footer style="text-align: center; padding: 40px 0; margin-top: 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px;">
-    <p>© 2026 Song Zhe. All rights reserved.</p>
-    <p style="margin-top: 6px;">
-      <span lang="en">Industrial Engineering · Kaizen · Digitalization</span>
-      <span lang="de">Industrial Engineering · Kaizen · Digitalisierung</span>
-    </p>
+  <footer class="site-footer">
+    <p class="footer-title"><span lang="en">Let’s talk about Kaizen</span><span lang="de">Sprechen wir über Kaizen</span></p>
+    <div class="copy-row center" data-copy-buttons></div>
+    <p class="footer-copy">© 2026 Song Zhe. All rights reserved.</p>
   </footer>
 </body>
 </html>

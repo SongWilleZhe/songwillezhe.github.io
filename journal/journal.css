@@ -282,3 +282,8 @@ body .article h1 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.2; margin
   .post-item.with-thumb:hover { padding: 12px; }
   .post-thumb { min-height: 0; aspect-ratio: 16 / 9; }
 }
+
+/* ===== 文章末尾联系入口 ===== */
+.cta { margin-top: 48px; text-align: center; }
+.cta-title { font-size: 20px; font-weight: 600; line-height: 1.35; margin: 0 0 12px; color: var(--text); }
+.article .cta + .article-footer { margin-top: 32px; text-align: center; }
