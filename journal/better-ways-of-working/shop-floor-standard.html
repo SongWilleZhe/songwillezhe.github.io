@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-title-de="Ordentlich heißt nicht richtig: Wie ein IE-Ingenieur den Shopfloor betrachten sollte — Song Zhe">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tidy Is Not the Same as Right: How an IE Engineer Should Look at the Shop Floor — Song Zhe</title>
+  <meta name="description" content="Why a tidy shop floor does not necessarily mean the work is correct, and how IE engineers should compare reality with the standard.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/journal/journal.css">
+  <script src="/lang.js"></script>
+  <script src="/copy.js"></script>
+  <style>
+    .article-body h2 { margin: 42px 0 16px; }
+    .article-body ul { margin: 0 0 20px 24px; }
+    .article-body li { margin: 0 0 9px; padding-left: 3px; }
+    .article-body figure { margin: 32px 0 36px; }
+    .article-body figure img { border: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container navigation">
+      <a href="/" class="logo">Song Zhe</a>
+      <a href="/journal/better-ways-of-working/" class="back-link">
+        <span lang="en">← All articles</span><span lang="de">← Alle Artikel</span>
+      </a>
+    </div>
+  </header>
+  <article class="article">
+    <div class="article-meta">
+      <span lang="en">Ideas &amp; work</span><span lang="de">Ideen &amp; Arbeit</span> · November 26, 2026
+    </div>
+    <h1>
+      <span lang="en">Tidy Is Not the Same as Right: How an IE Engineer Should Look at the Shop Floor</span>
+      <span lang="de">Ordentlich heißt nicht richtig: Wie ein IE-Ingenieur den Shopfloor betrachten sollte</span>
+    </h1>
+    <div class="article-body">
+      <div class="lang-block" lang="en">
+        <p>A tidy workplace does not mean the product is made correctly. If you look at the shop floor without comparing it to the standard, you only see the surface. The following scenario could happen in many factories.</p>
+<h2>Introduction: A tidy workstation that gets it wrong</h2>
+<p>Imagine this: an IE engineer is walking the line and stops at a workstation.</p>
+<p>The 5S at this workstation is almost flawless: materials are sorted by specification and clearly visible, the bench is clean, and every tool has its marked place. If an external auditor came to score it, it could probably serve as a model.</p>
+<p>Out of habit, he picks up the product drawing at the workstation and checks a few finished parts against it. The result: what was produced is wrong. None of the parts he checked met the requirements of the drawing.</p>
+<p>This scenario should be a warning to anyone who looks at the shop floor. The operator is clearly conscientious; but when the wrong thing is done neatly and carefully, the problem becomes even harder to see. A tidy workplace reassures everyone who passes by, including the team leader and the visiting auditor.</p>
+<p>It raises a question: When we &quot;go and look at the shop floor,&quot; what are we actually looking at?</p>
+<h2>1. The common flaw of shop-floor audits: judging form, not substance</h2>
+<p>Many external improvement audits follow much the same routine: the auditor walks around, looks at 5S, signage, aisles and how things are placed, then gives a score and some comments.</p>
+<p>Such audits are not worthless, but they have a structural blind spot: they assess how the shop floor looks, not whether the work is done right.</p>
+<p>As a result, several patterns are common in factories:</p>
+<ul>
+<li>Improvement for the audit: a cleanup blitz before the audit, and everything slides back afterwards. If the audit only looks at the surface, a blitz is the most cost-effective response.</li>
+<li>High 5S scores, unstable quality: audit scores rise year after year, but defect rates do not improve noticeably. The two lines move independently of each other.</li>
+<li>Problems stop at &quot;make it tidy&quot;: most audit comments are &quot;add a label here&quot; or &quot;draw a line there&quot;; few ask why a process goes wrong.</li>
+</ul>
+<p>The workstation at the start is a textbook example. Judged by form, it is excellent; judged by substance, it actually has a problem. Someone who only looks at the shop floor cannot tell the difference.</p>
+<h2>2. What the Three Gen principle really means: look at the shop floor with the standard in hand</h2>
+<p>When people talk about looking at the shop floor, many think of Toyota&#x27;s &quot;Three Gen&quot; principle: genba (the actual place), genbutsu (the actual thing) and genjitsu (the actual facts). But the Three Gen principle was never about &quot;taking a stroll on the shop floor.&quot; It has an implicit prerequisite: the standard.</p>
+<p>In the Toyota system, an &quot;abnormality&quot; has a very simple definition: a deviation between reality and the standard. Without a standard, there is no abnormality; without abnormalities, there is nothing to improve.</p>
+<p>So truly looking at the shop floor means holding the standard in one hand, keeping your eyes on reality, and comparing the two. The standard can be a drawing, a work instruction, process parameters, a standard time, or a reference sample.</p>
+<p>Another often-overlooked fact: 5S itself contains standards. The last two S&#x27;s, Standardize and Sustain (following the rules), are about working to standard. If 5S only covers Sort, Set in order and Shine, while the work itself does not meet the standard, then only half the job has been done.</p>
+<h2>3. Four levels of looking at the shop floor</h2>
+<p>I divide looking at the shop floor into four levels. The deeper you go, the closer you get to the substance, and the last two levels cannot be judged without the standard.</p>
+<figure>
+  <a href="/images/shop-floor-levels-en.png" target="_blank" rel="noopener">
+    <img src="/images/shop-floor-levels-en.png" alt="Figure: Four levels of looking at the shop floor, from surface to substance" loading="lazy">
+  </a>
+  <figcaption>Figure: Four levels of looking at the shop floor, from surface to substance</figcaption>
+</figure>
+<p>Many shop-floor audits stop at levels 1 and 2. These can be judged by eye and experience, and they are where results are easiest to show. Levels 3 and 4 require checking item by item against work instructions and drawings. That takes time and effort, and it is also more likely to uncover uncomfortable problems.</p>
+<p>The professional strength of an IE engineer lies precisely in levels 2 and 3: process analysis, motion analysis and standardized work are, by nature, comparisons against a standard. An IE engineer who only looks at level 1 is wasting their expertise. And level 4 reminds us that all improvement must ultimately come down to whether what we produce is right.</p>
+<h2>4. In practice: standing at a workstation, what to look at and what to ask</h2>
+<p>When I stand at a workstation today, I go through it in the following order. The order matters more than the content.</p>
+<ol>
+<li><strong>Find the standard first</strong><ul>
+<li>Where are the drawing and work instruction for this workstation? Can the operator reach them?</li>
+<li>Are they the latest revision? Is it the same version that engineering has?</li>
+<li>If you cannot find the standard, that is the biggest problem in itself, and there is no need to look further.</li>
+</ul>
+<li><strong>Let the operator explain</strong><ul>
+<li>Ask the operator to explain in their own words how this process is done and what matters most.</li>
+<li>Does what they say match the standard? Who did they learn it from?</li>
+</ul>
+<li><strong>Check against the actual product</strong><ul>
+<li>Compare a few finished parts and work-in-progress against the drawing, focusing on key dimensions, orientation and connections.</li>
+<li>Compare one complete work cycle against the work instruction to see whether the sequence and conditions match.</li>
+</ul>
+<li><strong>Ask &quot;What if it goes wrong?&quot;</strong><ul>
+<li>If something goes wrong here, at which step, and by whom, will it be caught?</li>
+<li>Are there first-article checks, self-inspection and error-proofing fixtures? Are they actually working?</li>
+</ul>
+<li><strong>Only then look at order and efficiency</strong><ul>
+<li>5S, work-in-progress, wasted motion, waiting: of course these matter, but they come after &quot;done right.&quot;</li>
+</ul>
+</ol>
+<p>This order deliberately puts the familiar 5S last. Not because it is unimportant, but because it is the easiest thing to see at a glance and the easiest to be satisfied with. First make sure it is done right, then strive to do it well.</p>
+<h2>5. From &quot;finding the problem&quot; to &quot;tracing the mechanism&quot;</h2>
+<p>Finding that the product was made wrong is only the first step. If you stop at &quot;inform the team leader and retrain this person,&quot; the next workstation or the next person will make the same mistake. The question an IE engineer should ask is: Why was it done wrong, and why did no one notice?</p>
+<p>Taking that workstation as an example, there are at least four lines to follow:</p>
+<ul>
+<li>Communicating the standard: Is the drawing at the workstation? Can the operator understand it? Has the drawing been turned into a work instruction that can be understood at a glance?</li>
+<li>Training and sign-off: Did the person who trained the operator teach it correctly? Did anyone check their output before they started working on their own?</li>
+<li>Detection: Among checks such as first-article confirmation and self-inspection, which one should have caught it? Why didn&#x27;t it?</li>
+<li>Error-proofing: Can fixtures or materials make it physically impossible to do it wrong, or make an error visible immediately?</li>
+</ul>
+<p>One more point is worth stressing: this operator put real care into 5S, which shows that attitude is not the problem. When a conscientious person still gets it wrong, the cause almost always lies in the system, not the person. Blaming the individual is the easiest conclusion, and the most useless one.</p>
+<h2>Conclusion: Let the shop floor speak for itself</h2>
+<p>Back to the opening question: what can you see by looking only at the shop floor?</p>
+<p>My answer: Looking only at the shop floor shows you the surface of management; looking at it against the standard shows you its substance.</p>
+<p>That does not mean carrying a stack of documents every time. What visual management aims for is to build the standard into the shop floor itself: a reference sample at the workstation, a comparison chart of key points, color coding at critical positions. Then anyone walking by can tell at a glance, without opening a document, whether things are normal or abnormal.</p>
+<p>By this measure, the workstation at the start still has a long way to go. It is tidy, but it cannot &quot;speak&quot;: an outsider standing there cannot tell right from wrong.</p>
+<p>As IE engineers, our value does not lie in being better at finding faults than others, but in two things: first, always bringing the standard when we look at the shop floor; second, making the standard part of the shop floor itself, so that the shop floor can speak for itself.</p>
+      </div>
+      <div class="lang-block" lang="de">
+        <p>Ein ordentlicher Arbeitsplatz bedeutet nicht, dass das Produkt richtig gefertigt wird. Wer den Shopfloor betrachtet, ohne ihn mit dem Standard abzugleichen, sieht nur die Oberfläche. Das folgende Szenario könnte sich in vielen Fabriken abspielen.</p>
+<h2>Einstieg: Ein ordentlicher Arbeitsplatz, an dem falsch gearbeitet wird</h2>
+<p>Stellen Sie sich folgendes Szenario vor: Ein IE-Ingenieur geht durch die Linie und bleibt an einem Arbeitsplatz stehen.</p>
+<p>Die 5S an diesem Arbeitsplatz sind nahezu makellos: Das Material ist nach Spezifikation sortiert und auf einen Blick erkennbar, die Arbeitsfläche ist sauber, jedes Werkzeug hat seinen festen Platz. Käme ein externer Auditor zur Bewertung, könnte dieser Arbeitsplatz wohl als Vorbild dienen.</p>
+<p>Aus Gewohnheit nimmt er die Produktzeichnung am Arbeitsplatz zur Hand und vergleicht einige fertige Teile damit. Das Ergebnis: Was hier gefertigt wird, ist falsch. Keines der geprüften Teile entspricht den Anforderungen der Zeichnung.</p>
+<p>Dieses Szenario sollte jedem eine Warnung sein, der den Shopfloor betrachtet. Der Mitarbeiter arbeitet zweifellos gewissenhaft; doch wenn das Falsche sorgfältig und ordentlich gemacht wird, ist das Problem umso schwerer zu erkennen. Denn ein ordentlicher Arbeitsplatz beruhigt jeden, der vorbeikommt – den Teamleiter ebenso wie den Auditor.</p>
+<p>Daraus ergibt sich eine Frage: Wenn wir „an den Shopfloor gehen und hinschauen“ – was sehen wir eigentlich?</p>
+<h2>1. Die typische Schwäche von Shopfloor-Audits: Die Form zählt, nicht die Substanz</h2>
+<p>Viele externe Verbesserungsaudits laufen ähnlich ab: Der Auditor macht einen Rundgang, schaut auf 5S, Kennzeichnungen, Verkehrswege und die Anordnung der Dinge und vergibt dann Punkte und Hinweise.</p>
+<p>Solche Audits sind nicht wertlos, haben aber einen strukturellen blinden Fleck: Sie bewerten, wie der Shopfloor aussieht, nicht, ob richtig gearbeitet wird.</p>
+<p>In Fabriken sieht man daher häufig folgende Muster:</p>
+<ul>
+<li>Verbesserung für das Audit: Vor dem Audit wird eilig aufgeräumt, danach ist alles wieder wie vorher. Wenn das Audit nur auf die Oberfläche schaut, ist die Aufräumaktion die lohnendste Reaktion.</li>
+<li>Hohe 5S-Punktzahl, instabile Qualität: Die Auditergebnisse steigen Jahr für Jahr, die Fehlerquote verbessert sich jedoch kaum. Beide Kurven entwickeln sich unabhängig voneinander.</li>
+<li>Probleme enden bei „ordentlich hinstellen“: Die meisten Hinweise lauten „hier ein Schild anbringen“ oder „dort eine Linie ziehen“; selten wird gefragt, warum ein Prozess Fehler erzeugt.</li>
+</ul>
+<p>Der Arbeitsplatz vom Anfang ist ein Paradebeispiel. Nach der Form ist er ausgezeichnet; nach der Substanz hat er tatsächlich ein Problem. Wer nur auf den Shopfloor schaut, kann das eine nicht vom anderen unterscheiden.</p>
+<h2>2. Was das Drei-Gen-Prinzip wirklich bedeutet: Den Shopfloor mit dem Standard in der Hand betrachten</h2>
+<p>Beim Thema Shopfloor denken viele an das „Drei-Gen-Prinzip“ von Toyota: Genba (der tatsächliche Ort), Genbutsu (das tatsächliche Teil) und Genjitsu (die tatsächlichen Fakten). Doch das Drei-Gen-Prinzip hieß nie „mal kurz durch die Fertigung gehen“. Es hat eine stillschweigende Voraussetzung: den Standard.</p>
+<p>Im Toyota-System hat „Abweichung“ eine ganz schlichte Definition: die Differenz zwischen Realität und Standard. Ohne Standard gibt es keine Abweichung; ohne Abweichung gibt es nichts zu verbessern.</p>
+<p>Den Shopfloor wirklich zu betrachten heißt also: in der einen Hand den Standard, den Blick auf die Realität – und beides miteinander abgleichen. Der Standard kann eine Zeichnung, eine Arbeitsanweisung, Prozessparameter, eine Standardzeit oder ein Gutmuster sein.</p>
+<p>Eine weitere, oft übersehene Tatsache: Auch 5S selbst enthält Standards. Die letzten beiden S, Standardisieren und Selbstdisziplin (Regeln einhalten), bedeuten nichts anderes, als nach Standard zu arbeiten. Wenn 5S nur Sortieren, Systematisieren und Säubern umfasst, die Arbeit selbst aber nicht dem Standard entspricht, ist nur die Hälfte erledigt.</p>
+<h2>3. Vier Ebenen der Shopfloor-Betrachtung</h2>
+<p>Ich unterteile die Betrachtung des Shopfloors in vier Ebenen. Je tiefer man geht, desto näher kommt man der Substanz – und die unteren zwei Ebenen lassen sich ohne Standard nicht beurteilen.</p>
+<figure>
+  <a href="/images/shop-floor-levels-de.png" target="_blank" rel="noopener">
+    <img src="/images/shop-floor-levels-de.png" alt="Abbildung: Vier Ebenen der Shopfloor-Betrachtung, von der Oberfläche zur Substanz" loading="lazy">
+  </a>
+  <figcaption>Abbildung: Vier Ebenen der Shopfloor-Betrachtung, von der Oberfläche zur Substanz</figcaption>
+</figure>
+<p>Viele Shopfloor-Audits bleiben auf Ebene 1 und 2 stehen. Diese lassen sich mit Augen und Erfahrung beurteilen, und hier lassen sich am leichtesten Ergebnisse vorweisen. Ebene 3 und 4 erfordern dagegen einen Punkt-für-Punkt-Abgleich mit Arbeitsanweisungen und Zeichnungen. Das kostet Zeit und Mühe und bringt eher unangenehme Probleme ans Licht.</p>
+<p>Die fachliche Stärke eines IE-Ingenieurs liegt genau auf Ebene 2 und 3: Prozessanalyse, Bewegungsanalyse und Standardarbeit sind ihrem Wesen nach Vergleiche mit einem Standard. Ein IE-Ingenieur, der nur auf Ebene 1 schaut, verschenkt sein Fachwissen. Und Ebene 4 erinnert uns daran: Jede Verbesserung muss sich am Ende daran messen lassen, ob das, was wir fertigen, richtig ist.</p>
+<h2>4. In der Praxis: Was man an einem Arbeitsplatz anschaut und fragt</h2>
+<p>Wenn ich heute an einem Arbeitsplatz stehe, gehe ich in folgender Reihenfolge vor. Die Reihenfolge ist wichtiger als der Inhalt.</p>
+<ol>
+<li><strong>Zuerst den Standard suchen</strong><ul>
+<li>Wo sind Zeichnung und Arbeitsanweisung für diesen Arbeitsplatz? Kann der Mitarbeiter sie mit einem Handgriff erreichen?</li>
+<li>Ist es der aktuelle Stand? Ist es dieselbe Version, die die Technik hat?</li>
+<li>Wenn sich kein Standard finden lässt, ist das selbst das größte Problem – dann muss man gar nicht weiterschauen.</li>
+</ul>
+<li><strong>Den Mitarbeiter erklären lassen</strong><ul>
+<li>Bitten Sie den Mitarbeiter, mit eigenen Worten zu erklären, wie dieser Arbeitsschritt ausgeführt wird und worauf es am meisten ankommt.</li>
+<li>Stimmt das Gesagte mit dem Standard überein? Von wem hat er es gelernt?</li>
+</ul>
+<li><strong>Mit dem realen Teil abgleichen</strong><ul>
+<li>Einige Fertigteile und Teile in Bearbeitung mit der Zeichnung vergleichen – mit Fokus auf kritische Maße, Ausrichtung und Verbindungen.</li>
+<li>Einen vollständigen Arbeitszyklus mit der Arbeitsanweisung vergleichen: Stimmen Reihenfolge und Bedingungen überein?</li>
+</ul>
+<li><strong>Fragen: „Was passiert, wenn es falsch läuft?“</strong><ul>
+<li>Wenn hier ein Fehler passiert: In welchem Schritt und von wem wird er entdeckt?</li>
+<li>Gibt es Erstteilprüfung, Selbstprüfung, Poka-Yoke-Vorrichtungen? Funktionieren sie tatsächlich?</li>
+</ul>
+<li><strong>Erst dann Ordnung und Effizienz betrachten</strong><ul>
+<li>5S, Bestände in der Fertigung, unnötige Bewegungen, Wartezeiten: Natürlich gehört das dazu – aber erst nach „richtig gemacht“.</li>
+</ul>
+</ol>
+<p>Diese Reihenfolge stellt das vertraute 5S bewusst ans Ende. Nicht, weil es unwichtig wäre, sondern weil es am leichtesten auf einen Blick zu sehen ist und am leichtesten zufriedenstellt. Zuerst sicherstellen, dass richtig gearbeitet wird, dann danach streben, gut zu arbeiten.</p>
+<h2>5. Vom „Problem finden“ zum „Mechanismus aufdecken“</h2>
+<p>Festzustellen, dass das Produkt falsch gefertigt wurde, ist nur der erste Schritt. Wer bei „Teamleiter informieren, Mitarbeiter nachschulen“ stehen bleibt, wird erleben, dass am nächsten Arbeitsplatz, beim nächsten Mitarbeiter derselbe Fehler passiert. Die Frage, die ein IE-Ingenieur stellen sollte, lautet: Warum wurde falsch gearbeitet – und warum hat es niemand bemerkt?</p>
+<p>Am Beispiel dieses Arbeitsplatzes lassen sich mindestens vier Spuren verfolgen:</p>
+<ul>
+<li>Vermittlung des Standards: Liegt die Zeichnung am Arbeitsplatz? Kann der Mitarbeiter sie lesen? Wurde die Zeichnung in eine Arbeitsanweisung übersetzt, die man auf einen Blick versteht?</li>
+<li>Einarbeitung und Freigabe: Hat derjenige, der ihn eingearbeitet hat, es richtig vermittelt? Hat vor dem selbstständigen Arbeiten jemand seine Teile geprüft?</li>
+<li>Fehlererkennung: Welche der Prüfungen, etwa Erstteilprüfung oder Selbstprüfung, hätte den Fehler entdecken müssen? Warum hat sie es nicht?</li>
+<li>Fehlervermeidung: Lässt sich durch Vorrichtungen oder Material erreichen, dass der Fehler physisch unmöglich ist oder sofort sichtbar wird?</li>
+</ul>
+<p>Ein Punkt verdient besondere Betonung: Dieser Mitarbeiter hat sich bei 5S große Mühe gegeben – an seiner Einstellung liegt es also nicht. Wenn ein gewissenhafter Mensch trotzdem Fehler macht, liegt die Ursache fast immer im System, nicht beim Menschen. Die Schuld beim Einzelnen zu suchen, ist die bequemste und zugleich nutzloseste Schlussfolgerung.</p>
+<h2>Fazit: Den Shopfloor selbst sprechen lassen</h2>
+<p>Zurück zur Ausgangsfrage: Was kann man erkennen, wenn man nur auf den Shopfloor schaut?</p>
+<p>Meine Antwort: Wer nur auf den Shopfloor schaut, sieht die Oberfläche des Managements; wer ihn mit dem Standard abgleicht, sieht seine Substanz.</p>
+<p>Das heißt nicht, dass man bei jedem Rundgang einen Stapel Dokumente mitnehmen muss. Das Ziel des visuellen Managements ist es, den Standard direkt in den Shopfloor einzubauen: ein Gutmuster am Arbeitsplatz, ein Vergleichsbild der kritischen Punkte, farbige Markierungen an kritischen Stellen. So kann jeder, der vorbeigeht, ohne in Unterlagen zu blättern, auf einen Blick erkennen, ob alles normal ist oder nicht.</p>
+<p>Daran gemessen hat der Arbeitsplatz vom Anfang noch einen weiten Weg vor sich. Er ist ordentlich, aber er „spricht“ nicht: Ein Außenstehender kann dort nicht erkennen, was richtig und was falsch ist.</p>
+<p>Unser Wert als IE-Ingenieure liegt nicht darin, besser Fehler zu finden als andere, sondern in zwei Dingen: Erstens, beim Blick auf den Shopfloor immer den Standard mitzubringen; zweitens, den Standard zu einem Teil des Shopfloors zu machen – damit der Shopfloor für sich selbst spricht.</p>
+      </div>
+    </div>
+    <aside class="cta">
+      <p class="cta-title"><span lang="en">Let’s talk about Kaizen</span><span lang="de">Sprechen wir über Kaizen</span></p>
+      <div class="copy-row center" data-copy-buttons></div>
+    </aside>
+    <div class="article-footer">
+      <a href="/journal/better-ways-of-working/"><span lang="en">← All articles</span><span lang="de">← Alle Artikel</span></a>
+    </div>
+  </article>
+</body>
+</html>
