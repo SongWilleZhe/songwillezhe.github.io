@@ -50,7 +50,11 @@
     section.block + section.block { border-top: 1px solid var(--line); }
 
     /* PROFILE */
-    .about img { display: block; width: 200px; height: 260px; object-fit: cover; object-position: 60% center; border-radius: 4px; }
+    .about img { 
+      display: block; width: 200px; height: 260px; object-fit: cover; 
+      border-radius: 8px; /* 圆角 */
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* 极简阴影 */
+    }
     .about h2 { font-size: 36px; line-height: 1; margin-top: -0.12em; margin-bottom: 8px; }
     .role { color: var(--green); font-weight: 500; margin-bottom: 12px; }
     .contact { display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: baseline; }
