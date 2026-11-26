@@ -246,7 +246,7 @@
             rgba(247, 245, 239, 0.15) 75%,
             rgba(247, 245, 239, 0) 100%
           ),
-          url('/images/kaizen.jpg') center bottom / auto 70% no-repeat;
+          url('/images/kaizen.jpg') center bottom / cover no-repeat;
       }
 
       .hero h1 { letter-spacing: -2px; }
@@ -260,6 +260,43 @@
       .job, .post { grid-template-columns: 1fr; gap: 4px; }
 
       .videos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    /* 紧凑排版 */
+
+    .navigation { min-height: 60px; }
+    .hero { min-height: 360px; padding-top: 48px; padding-bottom: 48px; }
+    .hero h1 { font-size: clamp(36px, 4.5vw, 54px); margin-bottom: 18px; }
+    section:not(.hero) { padding: 30px 0; }
+    h2 { font-size: 30px; margin-bottom: 14px; }
+    .post { padding: 12px 0; }
+    .all-link { padding-top: 10px; }
+    .videos { grid-template-columns: repeat(auto-fill, minmax(0, 170px)); gap: 18px; }
+    .video-cover { margin-bottom: 8px; }
+    .video-cover span { width: 42px; height: 42px; }
+    .video h3 { font-size: 17px; }
+    .video p { font-size: 12px; }
+    .about { grid-template-columns: 220px 1fr; gap: 36px; }
+    .bio { margin-bottom: 16px; }
+    .job { padding: 9px 0; }
+
+    @media (max-width: 700px) {
+      .hero { min-height: 340px; padding-top: 32px; padding-bottom: 32px; }
+      section:not(.hero) { padding: 26px 0; }
+      .videos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about { grid-template-columns: 1fr; gap: 20px; }
+      .about img { max-width: 240px; }
+      .post, .job { padding: 10px 0; }
+    }
+
+    /* 照片与文字上下对齐（仅电脑版） */
+
+    @media (min-width: 701px) {
+      .about { align-items: stretch; }
+      .about img { height: 0; min-height: 100%; aspect-ratio: auto; }
+      .about h2 { line-height: 1; margin-top: -0.2em; }
+      .job:last-child { padding-bottom: 0; }
+      .job:last-child p { margin-bottom: -8px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -277,8 +314,8 @@
       <a href="#" class="logo">Song Zhe</a>
 
       <nav class="nav-links" aria-label="Main navigation">
-        <a href="#videos">Videos</a>
         <a href="#articles">Articles</a>
+        <a href="#videos">Videos</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -296,6 +333,22 @@
     </section>
 
   <main>
+
+    <!-- ARTICLES：首页只放最新 3 篇。
+         新文章加在最上面，超过 3 篇时删掉最下面的一篇。
+         全部文章保存在 /journal/better-ways-of-working/ -->
+
+    <section id="articles">
+      <h2>Articles</h2>
+
+      <a class="post" href="/journal/better-ways-of-working/equipment-efficiency.html">
+        <div class="post-date">November 2026</div>
+        <h3>Clear Roles, Shared Goals: How We Optimized Equipment Efficiency</h3>
+      </a>
+
+      <a class="all-link" href="/journal/better-ways-of-working/">All articles →</a>
+    </section>
+
 
     <!-- VIDEOS：每个系列一张卡片，首页最多 3 个。
          系列里的新视频加到系列页面，首页不用改。 -->
@@ -316,22 +369,6 @@
           <p>8 chapters · English &amp; Deutsch</p>
         </a>
       </div>
-    </section>
-
-
-    <!-- ARTICLES：首页只放最新 3 篇。
-         新文章加在最上面，超过 3 篇时删掉最下面的一篇。
-         全部文章保存在 /journal/better-ways-of-working/ -->
-
-    <section id="articles">
-      <h2>Articles</h2>
-
-      <a class="post" href="/journal/better-ways-of-working/equipment-efficiency.html">
-        <div class="post-date">November 2026</div>
-        <h3>Clear Roles, Shared Goals: How We Optimized Equipment Efficiency</h3>
-      </a>
-
-      <a class="all-link" href="/journal/better-ways-of-working/">All articles →</a>
     </section>
 
 
