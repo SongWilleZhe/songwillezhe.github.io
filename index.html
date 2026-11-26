@@ -213,6 +213,23 @@
 
 
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+        /* ===== 减少横线 ===== */
+    header { border-bottom: 0; box-shadow: 0 1px 8px rgba(8, 22, 39, 0.07); }
+    section.block { padding: 36px 0; }
+    section.block + section.block { border-top: 0; }
+    .facts { border: 0; background: #f4f6f8; border-radius: 8px; padding: 14px 18px; }
+    .services-header { border-bottom: 0; padding: 0; }
+    .contact a, .read-more { border-bottom: 0; }
+    .contact a:hover, .read-more:hover { text-decoration: underline; }
+    .post, .post:hover { border-color: transparent; }
+    .post { background: #f4f6f8; margin-bottom: 12px; }
+    .post:hover { background: #eaf1f8; }
+    .all-link { border-top: 0; }
+    footer { border-top: 0 !important; background: #f4f6f8; }
+    @media (max-width: 700px) {
+      section.block { padding: 24px 0; }
+      .post { padding: 14px 16px; }
+    }
   </style>
   <script src="/lang.js"></script>
 </head>
