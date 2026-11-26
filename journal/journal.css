@@ -1,12 +1,12 @@
 :root {
-  --bg: #f7f5ef;
-  --text: #35382f;
-  --muted: #858579;
-  --green: #77866e;
-  --green-light: #e9ece4;
-  --line: #e5e2d8;
-  --serif: "EB Garamond", Georgia, serif;
-  --sans: "Work Sans", Arial, sans-serif;
+  --bg: #ffffff;
+  --text: #16202b;
+  --muted: #52606d;
+  --green: #0b5cad;
+  --green-light: #eef3f8;
+  --line: #dbe2e9;
+  --serif: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --sans: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,7 +35,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(247, 245, 239, 0.94);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -177,7 +177,7 @@ header {
 
 .article-body p {
   margin-bottom: 20px;
-  color: #4a4b43;
+  color: #33414e;
 }
 
 .article-body .lang-block + .lang-block {
@@ -235,3 +235,9 @@ header {
     grid-row: 1 / span 2;
   }
 }
+
+/* 工程风格 */
+.list-page h1, .article h1 { font-weight: 600; letter-spacing: -0.5px; }
+.post-item h2 { font-weight: 500; font-size: 21px; }
+.logo { font-weight: 600; }
+.post-date, .article-meta, .list-label { font-family: "IBM Plex Mono", Consolas, monospace; }

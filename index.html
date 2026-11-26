@@ -1,361 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-title-de="Song Zhe — Industrial Engineering &amp; Kaizen">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Song Zhe — Industrial Engineer</title>
-  <meta name="description" content="Song Zhe, Industrial Engineer based in Japan. Thinking about better ways of working.">
+  <title>Song Zhe — Industrial Engineering &amp; Kaizen</title>
+  <meta name="description" content="Song Zhe. Industrial engineering and Kaizen: ten years in manufacturing, experience in China and Japan. Articles and videos.">
   <meta name="author" content="Song Zhe">
-  <meta name="theme-color" content="#f7f5ef">
+  <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <style>
-    :root {
-      --bg: #f7f5ef;
-      --text: #35382f;
-      --muted: #5c5d53;
-      --green: #66755d;
-      --line: #e5e2d8;
-      --serif: "EB Garamond", Georgia, serif;
-      --sans: "Work Sans", Arial, sans-serif;
-    }
+    :root { --bg: #ffffff; --text: #16202b; --muted: #52606d; --green: #0b5cad; --line: #dbe2e9;
+      --serif: "IBM Plex Sans", "Segoe UI", Arial, sans-serif; --sans: "IBM Plex Sans", "Segoe UI", Arial, sans-serif; }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 15px;
-      line-height: 1.8;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+    body { background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 15px;
+      line-height: 1.7; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
-
-    main { width: min(920px, 88%); margin: 0 auto; }
-
-    section { padding: 52px 0; }
-
-    main section + section { border-top: 1px solid var(--line); }
-
     h1, h2, h3 { font-family: var(--serif); font-weight: normal; line-height: 1.2; }
-
-    
-
-    h2 { font-size: 40px; margin-bottom: 24px; }
-
-    h3 { font-size: 22px; }
-
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    h2 { font-size: 30px; margin-bottom: 14px; }
+    h3 { font-size: 21px; }
 
     /* NAVIGATION */
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(247, 245, 239, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .navigation {
-      width: min(920px, 88%);
-      margin: 0 auto;
-      min-height: 76px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 25px;
-    }
-
-    .logo {
-      font-family: var(--serif);
-      font-size: 25px;
-      letter-spacing: -1px;
-      font-weight: normal;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 29px;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 15px;
-      transition: color .2s;
-    }
-
-    .nav-links a:hover {
-      color: var(--green);
-    }
+    header { position: sticky; top: 0; z-index: 10; background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .navigation { width: min(920px, 88%); margin: 0 auto; min-height: 60px; display: flex;
+      align-items: center; gap: 28px; }
+    .logo { font-family: var(--serif); font-size: 25px; letter-spacing: -1px; }
+    .nav-links { display: flex; gap: 28px; margin-left: auto; }
+    .nav-links a { color: var(--muted); }
+    .nav-links a:hover { color: var(--green); }
 
     /* HERO */
+    .hero { min-height: 360px; display: flex; flex-direction: column; justify-content: center;
+      padding: 48px max(6%, calc(50% - 460px));
+      background: linear-gradient(to right, rgba(247,245,239,0.97) 0%, rgba(247,245,239,0.92) 40%,
+        rgba(247,245,239,0.55) 65%, rgba(247,245,239,0.08) 100%),
+        url('/images/kaizen.jpg') center / cover no-repeat; }
+    .hero h1 { font-size: clamp(36px, 4.5vw, 54px); letter-spacing: -1px; max-width: 680px; margin-bottom: 18px; }
+    .hero h1 em { color: var(--green); }
+    .hero p { max-width: 560px; color: #33414e; }
 
-    .hero {
-      min-height: 440px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 80px max(6%, calc(50% - 460px));
-      background:
-        linear-gradient(
-          to right,
-          rgba(247, 245, 239, 0.97) 0%,
-          rgba(247, 245, 239, 0.92) 40%,
-          rgba(247, 245, 239, 0.55) 65%,
-          rgba(247, 245, 239, 0.08) 100%
-        ),
-        url('/images/kaizen.jpg') center / cover no-repeat;
+    main { width: min(920px, 88%); margin: 0 auto; }
+    section.block { padding: 30px 0; }
+    section.block + section.block { border-top: 1px solid var(--line); }
+
+    /* PROFILE */
+    .about { display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: stretch; }
+    .about img { display: block; width: 100%; height: 0; min-height: 100%; object-fit: cover; object-position: 72% center; }
+    .about h2 { font-size: 36px; line-height: 1; margin-top: -0.12em; margin-bottom: 8px; }
+    .role { color: var(--green); font-weight: 500; margin-bottom: 12px; }
+    .contact { display: flex; flex-wrap: wrap; gap: 6px 22px; align-items: baseline; }
+    .contact a { color: var(--green); border-bottom: 1px solid var(--green); overflow-wrap: anywhere; }
+    .contact > span { color: var(--muted); font-size: 14px; margin-bottom: -6px; }
+
+    /* PROFILE HIGHLIGHTS */
+    .about { grid-template-columns: 220px 1fr; gap: 32px; }
+    .facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 12px 0;
+      padding: 10px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .facts div { min-width: 0; }
+    .facts strong { display: block; font-weight: 600; font-size: 26px; line-height: 1.25; color: var(--green); }
+    .facts div > span { display: block; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .facts strong > span { display: inline; }
+    .system { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-bottom: 12px; }
+    .step { position: relative; border-top: 3px solid var(--green); padding-top: 7px; }
+    .step + .step::before { content: "→"; position: absolute; left: -19px; top: 4px; color: var(--green); }
+    .step h3 { font-size: 15px; font-weight: 600; }
+    .step p { color: var(--green); font-size: 13px; margin-bottom: 3px; }
+    .step ul { list-style: none; font-size: 13px; line-height: 1.6; color: #33414e; }
+    .contact { display: block; font-size: 14px; }
+    .contact > span { margin: 0; }
+
+    @media (max-width: 700px) {
+      .about { grid-template-columns: 1fr; gap: 20px; }
+      .facts { grid-template-columns: 1fr; gap: 6px; }
+      .facts div { display: grid; grid-template-columns: 128px 1fr; gap: 10px; align-items: center; }
+      .facts strong { font-size: 20px; }
+      .system { grid-template-columns: 1fr; gap: 20px; }
+      .step + .step::before { content: "↓"; left: 0; top: -22px; }
     }
-
-    .hero h1 {
-      font-family: var(--serif);
-      font-size: clamp(42px, 6vw, 70px);
-      max-width: 680px;
-      line-height: 1.12;
-      font-weight: normal;
-      letter-spacing: -1px;
-      margin-bottom: 30px;
-    }
-
-    .hero h1 em {
-      color: var(--green);
-      font-weight: normal;
-    }
-
-    .hero-description {
-      max-width: 600px;
-      color: #4a4b43;
-      font-size: 15px;
-      line-height: 2.1;
-    }
-
-    /* VIDEOS */
-
-    .videos {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 220px));
-      gap: 24px;
-    }
-
-    .video-cover {
-      position: relative;
-      aspect-ratio: 9 / 16;
-      background: #dde2d6;
-      margin-bottom: 14px;
-    }
-
-    .video-cover img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .video-cover span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: rgba(53, 56, 47, 0.8);
-      color: white;
-      display: grid;
-      place-items: center;
-      padding-left: 3px;
-    }
-
-    .video p { color: var(--muted); font-size: 14px; }
-
-    .video:hover h3 { color: var(--green); }
 
     /* ARTICLES */
-
-    .post {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      align-items: baseline;
-      gap: 20px;
-      padding: 22px 0;
-      border-top: 1px solid var(--line);
-      transition: color .2s;
-    }
-
-    .post:hover { color: var(--green); }
-
+    .post { display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: baseline;
+      padding: 12px 0; border-top: 1px solid var(--line); }
+    .post:hover, .video:hover h3 { color: var(--green); }
     .post-date { color: var(--muted); font-size: 14px; }
+    .all-link { display: block; border-top: 1px solid var(--line); padding-top: 10px; text-align: right; color: var(--green); font-size: 14px; }
 
-    .all-link {
-      display: block;
-      border-top: 1px solid var(--line);
-      padding-top: 18px;
-      text-align: right;
-      color: var(--green);
-      font-size: 13px;
-    }
-
-    /* ABOUT + EXPERIENCE */
-
-    .about {
-      display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 55px;
-      align-items: start;
-    }
-
-    .about img {
-      display: block;
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: 85% center;
-    }
-
-    .bio { margin-bottom: 30px; }
-
-    .job {
-      display: grid;
-      grid-template-columns: 120px 1fr;
-      gap: 20px;
-      padding: 18px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .job-date, .job p { color: var(--muted); font-size: 14px; }
-
-    @media (max-width: 700px) {
-      .navigation { min-height: 68px; }
-
-      .hero {
-        padding: 56px 6%;
-        justify-content: flex-start;
-        background:
-          linear-gradient(
-            rgba(247, 245, 239, 0.97) 0%,
-            rgba(247, 245, 239, 0.88) 45%,
-            rgba(247, 245, 239, 0.15) 75%,
-            rgba(247, 245, 239, 0) 100%
-          ),
-          url('/images/kaizen.jpg') center bottom / cover no-repeat;
-      }
-
-      .hero h1 { letter-spacing: -2px; }
-
-      section { padding: 38px 0; }
-
-      .about { grid-template-columns: 1fr; gap: 30px; }
-
-      .about img { max-width: 360px; }
-
-      .job, .post { grid-template-columns: 1fr; gap: 4px; }
-
-      .videos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
-    /* 紧凑排版 */
-
-    .navigation { min-height: 60px; }
-    .hero { min-height: 360px; padding-top: 48px; padding-bottom: 48px; }
-    .hero h1 { font-size: clamp(36px, 4.5vw, 54px); margin-bottom: 18px; }
-    section:not(.hero) { padding: 30px 0; }
-    h2 { font-size: 30px; margin-bottom: 14px; }
-    .post { padding: 12px 0; }
-    .all-link { padding-top: 10px; }
-    .videos { grid-template-columns: repeat(auto-fill, minmax(0, 170px)); gap: 18px; }
-    .video-cover { margin-bottom: 8px; }
-    .video-cover span { width: 42px; height: 42px; }
+    /* VIDEOS */
+    .videos { display: grid; grid-template-columns: repeat(auto-fill, minmax(0, 170px)); gap: 18px; }
+    .video-cover { position: relative; aspect-ratio: 9 / 16; background: #dde2d6; margin-bottom: 8px; }
+    .video-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .video-cover > span { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+      width: 42px; height: 42px; border-radius: 50%; background: rgba(53,56,47,0.8); color: #fff;
+      display: grid; place-items: center; padding-left: 3px; }
     .video h3 { font-size: 17px; }
-    .video p { font-size: 12px; }
-    .about { grid-template-columns: 220px 1fr; gap: 36px; }
-    .bio { margin-bottom: 16px; }
-    .job { padding: 9px 0; }
+    .video p { color: var(--muted); font-size: 12px; }
 
     @media (max-width: 700px) {
-      .hero { min-height: 340px; padding-top: 32px; padding-bottom: 32px; }
-      section:not(.hero) { padding: 26px 0; }
-      .videos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .nav-links { gap: 22px; padding-bottom: 6px; }
+      .hero { min-height: 360px; justify-content: flex-start; padding: 32px 6%;
+        background: linear-gradient(rgba(247,245,239,0.97) 0%, rgba(247,245,239,0.88) 50%,
+          rgba(247,245,239,0.15) 80%, rgba(247,245,239,0) 100%),
+          url('/images/kaizen.jpg') center bottom / cover no-repeat; }
+      section.block { padding: 26px 0; }
       .about { grid-template-columns: 1fr; gap: 20px; }
-      .about img { max-width: 240px; }
-      .post, .job { padding: 10px 0; }
+      .about img { height: auto; min-height: 0; max-width: 180px; aspect-ratio: 4 / 5; }
+      .about h2 { margin-top: 0; }
+      .post { grid-template-columns: 1fr; gap: 4px; }
+      .videos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
-    /* 照片与文字上下对齐（仅电脑版） */
+    /* 工程风格 */
+    h1, h2 { font-weight: 600; letter-spacing: -0.5px; }
+    h3 { font-weight: 500; font-size: 19px; }
+    .logo { font-weight: 600; font-size: 21px; letter-spacing: 0; }
+    .hero { color: #fff; background: linear-gradient(to right, rgba(8,22,39,0.96) 0%, rgba(8,22,39,0.90) 42%,
+      rgba(8,22,39,0.50) 68%, rgba(8,22,39,0.12) 100%), url('/images/kaizen.jpg') center / cover no-repeat; }
+    .hero h1 { font-size: clamp(32px, 4.2vw, 50px); }
+    .hero h1 em { font-style: normal; color: #6db6ff; }
+    .hero p { color: #d5e0ea; }
+    #about h2 { font-size: 34px; }
+    h2 { font-size: 26px; }
+    section.block > h2::before { content: ""; display: inline-block; width: 4px; height: 0.85em;
+      background: var(--green); margin-right: 12px; vertical-align: -0.05em; }
+    .role, .post-date { font-family: "IBM Plex Mono", Consolas, monospace; }
+    .role { font-size: 14px; }
+    .post-date { font-size: 13px; }
+    .video h3 { font-size: 16px; }
+    .video-cover { background: #e4eaf0; }
+    .video-cover > span { background: rgba(8,22,39,0.8); }
 
-    @media (min-width: 701px) {
-      .about { align-items: stretch; }
-      .about img { height: 0; min-height: 100%; aspect-ratio: auto; }
-      .about h2 { line-height: 1; margin-top: -0.2em; }
-      .job:last-child { padding-bottom: 0; }
-      .job:last-child p { margin-bottom: -8px; }
+    @media (max-width: 700px) {
+      .hero { background: linear-gradient(rgba(8,22,39,0.96) 0%, rgba(8,22,39,0.88) 55%,
+        rgba(8,22,39,0.35) 82%, rgba(8,22,39,0.10) 100%), url('/images/kaizen.jpg') center bottom / cover no-repeat; }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-    }
+
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
   </style>
+  <script src="/lang.js"></script>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-
   <header>
-    <div class="container navigation">
+    <div class="navigation">
       <a href="#" class="logo">Song Zhe</a>
-
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#articles">Articles</a>
+      <nav class="nav-links">
+        <a href="#about"><span lang="en">About</span><span lang="de">Profil</span></a>
+        <a href="#articles"><span lang="en">Articles</span><span lang="de">Artikel</span></a>
         <a href="#videos">Videos</a>
-        <a href="#about">About</a>
       </nav>
     </div>
   </header>
 
-    <!-- HOME -->
-
-    <section class="hero">
-      <h1>Thinking about better ways of <em>Kaizen.</em></h1>
-
-      <p class="hero-description">
-        Song Zhe, Industrial Engineer. Short videos and articles
-        on Kaizen and continuous improvement.
-      </p>
-    </section>
+  <section class="hero">
+    <h1 lang="en">Thinking about better ways of <em>Kaizen.</em></h1>
+    <h1 lang="de">Gedanken über bessere Wege im <em>Kaizen.</em></h1>
+    <p lang="en">Experience from the shop floor, shared in articles and short videos.</p>
+    <p lang="de">Erfahrungen aus der Produktion, geteilt in Artikeln und kurzen Videos.</p>
+  </section>
 
   <main>
 
-    <!-- ARTICLES：首页只放最新 3 篇。
-         新文章加在最上面，超过 3 篇时删掉最下面的一篇。
-         全部文章保存在 /journal/better-ways-of-working/ -->
+    <!-- 个人品牌简介 -->
+    <section class="block" id="about">
+      <div class="about">
+        <img src="/images/about.jpg" alt="Portrait of Song Zhe" data-alt-de="Porträt von Song Zhe">
+        <div>
+          <h2>Song Zhe</h2>
+          <p class="role">Industrial Engineering · Kaizen</p>
+          <p lang="en">Ten years in manufacturing, including Fortune Global 500 companies, with
+            experience in China and Japan. I turn Kaizen, lean thinking and digital tools into
+            better ways of working.</p>
+          <p lang="de">Zehn Jahre in der Fertigungsindustrie, darunter bei Fortune-Global-500-Unternehmen,
+            mit Erfahrung in China und Japan. Aus Kaizen, Lean-Denken und digitalen Werkzeugen
+            entwickle ich bessere Arbeitsweisen.</p>
 
-    <section id="articles">
-      <h2>Articles</h2>
+          <div class="facts">
+            <div><strong>10+</strong><span lang="en">years in manufacturing</span><span lang="de">Jahre Fertigungsindustrie</span></div>
+            <div><strong>CN · JP</strong><span lang="en">experience in China &amp; Japan</span><span lang="de">Erfahrung in China &amp; Japan</span></div>
+            <div><strong>4 <span lang="en">languages</span><span lang="de">Sprachen</span></strong><span lang="en">Chinese, English, Japanese, German</span><span lang="de">Chinesisch, Englisch, Japanisch, Deutsch</span></div>
+          </div>
+
+          <!-- 能力体系：分析 → 改善 → 推广 -->
+          <div class="system">
+            <div class="step">
+              <h3><span lang="en">1. Analyze</span><span lang="de">1. Analysieren</span></h3>
+              <p>Industrial Engineering</p>
+              <ul>
+              <li><span lang="en">Time &amp; motion studies</span><span lang="de">Zeit- und Bewegungsstudien</span></li>
+              <li><span lang="en">Bottleneck analysis</span><span lang="de">Engpassanalyse</span></li>
+              <li><span lang="en">Capacity planning</span><span lang="de">Kapazitätsplanung</span></li>
+              </ul>
+            </div>
+            <div class="step">
+              <h3><span lang="en">2. Improve</span><span lang="de">2. Verbessern</span></h3>
+              <p>Lean &amp; Kaizen</p>
+              <ul>
+              <li><span lang="en">Line balancing</span><span lang="de">Austaktung</span></li>
+              <li>Poka Yoke</li>
+              <li><span lang="en">Standard work</span><span lang="de">Standardisierte Arbeit</span></li>
+              </ul>
+            </div>
+            <div class="step">
+              <h3><span lang="en">3. Scale</span><span lang="de">3. Skalieren</span></h3>
+              <p><span lang="en">Digital &amp; AI</span><span lang="de">Digitalisierung &amp; KI</span></p>
+              <ul>
+              <li>Power BI · Power Automate</li>
+              <li>Python</li>
+              <li><span lang="en">AI applications</span><span lang="de">KI-Anwendungen</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="contact"><span lang="en">Contact</span><span lang="de">Kontakt</span>: <a href="mailto:martina_song@163.com">martina_song@163.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLES：首页只放最新 3 篇，新文章加在最上面。英文和德文标题都要写。
+         全部文章保存在 /journal/better-ways-of-working/ -->
+    <section class="block" id="articles">
+      <h2><span lang="en">Articles</span><span lang="de">Artikel</span></h2>
 
       <a class="post" href="/journal/better-ways-of-working/equipment-efficiency.html">
         <div class="post-date">November 2026</div>
-        <h3>Clear Roles, Shared Goals: How We Optimized Equipment Efficiency</h3>
+        <h3 lang="en">Clear Roles, Shared Goals: How We Optimized Equipment Efficiency</h3>
+        <h3 lang="de">Klare Rollen, gemeinsame Ziele: Wie wir die Anlageneffizienz optimiert haben</h3>
       </a>
 
-      <a class="all-link" href="/journal/better-ways-of-working/">All articles →</a>
+      <a class="all-link" href="/journal/better-ways-of-working/"><span lang="en">All articles →</span><span lang="de">Alle Artikel →</span></a>
     </section>
 
-
-    <!-- VIDEOS：每个系列一张卡片，首页最多 3 个。
-         系列里的新视频加到系列页面，首页不用改。 -->
-
-    <section id="videos">
+    <!-- VIDEOS：每个系列一张卡片，首页最多 3 个。系列里的新视频加到系列页面。 -->
+    <section class="block" id="videos">
       <h2>Videos</h2>
-
       <div class="videos">
         <a class="video" href="/journal/kaizen-in-2-minutes/">
           <!-- 封面：把 j2nzTpOY-Ro 换成该系列第一个视频的 YouTube ID（两处） -->
@@ -365,54 +250,9 @@
                  onerror="this.onerror = null; this.src = 'https://i.ytimg.com/vi/j2nzTpOY-Ro/hqdefault.jpg';">
             <span aria-hidden="true">▶</span>
           </div>
-          <h3>Kaizen in 2 Minutes</h3>
-          <p>8 chapters · English &amp; Deutsch</p>
+          <h3><span lang="en">Kaizen in 2 Minutes</span><span lang="de">Kaizen in 2 Minuten</span></h3>
+          <p><span lang="en">8 chapters</span><span lang="de">8 Kapitel</span> · English &amp; Deutsch</p>
         </a>
-      </div>
-    </section>
-
-
-    <!-- ABOUT + EXPERIENCE -->
-
-    <section id="about">
-      <div class="about">
-
-        <img src="/images/about.jpg" alt="A portrait of Song Zhe">
-
-        <div>
-          <h2>Song Zhe</h2>
-
-          <p class="bio">
-            Industrial Engineer based in Japan, with over ten years of
-            international experience in manufacturing, production
-            optimization and operational excellence.
-          </p>
-
-          <div class="job">
-            <div class="job-date">2023 — Present</div>
-            <div>
-              <h3>MISUMI Group</h3>
-              <p>Senior Improvement Engineer · Precision Manufacturing</p>
-            </div>
-          </div>
-
-          <div class="job">
-            <div class="job-date">2020 — 2023</div>
-            <div>
-              <h3>Michelin</h3>
-              <p>Senior Industrial Engineer · Industrial Performance</p>
-            </div>
-          </div>
-
-          <div class="job">
-            <div class="job-date">2016 — 2020</div>
-            <div>
-              <h3>Jaguar Land Rover</h3>
-              <p>Industrial Engineer · Manufacturing &amp; Productivity</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
