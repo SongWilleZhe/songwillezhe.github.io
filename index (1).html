@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaizen in 2 Minutes — Song Zhe</title>
+  <meta name="description" content="Two-minute videos on Kaizen and the Toyota Production System, in English and German.">
+  <meta name="theme-color" content="#f7f5ef">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/journal/journal.css">
+
+  <style>
+    .series-subtitle {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--muted);
+      margin: -8px 0 30px;
+    }
+
+    .series-intro {
+      max-width: 640px;
+      color: #4a4b43;
+    }
+
+    .series-intro p + p {
+      margin-top: 12px;
+      color: var(--muted);
+    }
+
+    .series-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 30px 0 70px;
+    }
+
+    .series-meta span {
+      border: 1px solid #dcded4;
+      background: #fcfbf7;
+      padding: 6px 13px;
+      font-size: 11px;
+      color: #73786d;
+    }
+
+    /* CHAPTER */
+
+    .chapter {
+      margin-bottom: 70px;
+    }
+
+    .chapter-number {
+      color: var(--green);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .video-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .video-item {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 50px 1fr 40px;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 5px;
+      border: none;
+      border-bottom: 1px solid var(--line);
+      background: none;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      cursor: pointer;
+      transition: padding .2s, background .2s;
+    }
+
+    .video-item:hover {
+      padding-left: 12px;
+      background: rgba(233, 236, 228, 0.5);
+    }
+
+    .video-no {
+      color: var(--green);
+      font-size: 12px;
+    }
+
+    .video-en {
+      display: block;
+      font-family: var(--serif);
+      font-size: 21px;
+      line-height: 1.3;
+    }
+
+    .video-de {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .video-play {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--green);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--green);
+      font-size: 11px;
+      transition: background .2s, color .2s;
+    }
+
+    .video-item:hover .video-play {
+      background: var(--green);
+      color: white;
+    }
+
+    /* PLAYER (vertical / Shorts) */
+
+    .player {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background: rgba(30, 32, 27, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .player[hidden] {
+      display: none;
+    }
+
+    .player-box {
+      width: min(420px, 100%, calc((100vh - 110px) * 9 / 16));
+    }
+
+    .player-frame {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      background: black;
+    }
+
+    .player-frame iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .player-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin-top: 12px;
+      color: #f7f5ef;
+    }
+
+    .player-title {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    .player-close {
+      flex-shrink: 0;
+      background: none;
+      border: 1px solid rgba(247, 245, 239, 0.5);
+      color: #f7f5ef;
+      font: inherit;
+      font-size: 12px;
+      padding: 6px 14px;
+      cursor: pointer;
+    }
+
+    .player-close:hover {
+      background: rgba(247, 245, 239, 0.1);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+      .video-item {
+        grid-template-columns: 38px 1fr 34px;
+        gap: 10px;
+      }
+
+      .video-en {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container navigation">
+      <a href="/" class="logo">Song Zhe</a>
+      <a href="/#videos" class="back-link">← Back to home</a>
+    </div>
+  </header>
+
+  <main class="container list-page">
+
+    <div class="list-label">Video series · Kaizen</div>
+
+    <h1>Kaizen in 2 Minutes</h1>
+    <p class="series-subtitle" lang="de">Kaizen in 2 Minuten</p>
+
+    <div class="series-intro">
+      <p>
+        Short, two-minute videos on Kaizen and the Toyota Production System —
+        my own summaries and reflections, based on my reading and my work
+        on the shop floor.
+      </p>
+      <p lang="de">
+        Kurze Zwei-Minuten-Videos über Kaizen und das Toyota-Produktionssystem –
+        meine eigenen Zusammenfassungen und Gedanken, basierend auf meiner
+        Lektüre und meiner Arbeit in der Produktion.
+      </p>
+    </div>
+
+    <div class="series-meta">
+      <span>8 chapters · 8 Kapitel</span>
+      <span>~2 min each · je ca. 2 Min.</span>
+    </div>
+
+
+    <!-- ============ CHAPTER 1 ============ -->
+
+    <section class="chapter">
+      <div class="chapter-number">Chapter 01 · Kapitel 01</div>
+
+      <div class="video-list">
+
+        <button class="video-item" data-video="j2nzTpOY-Ro">
+          <span class="video-no">1.1</span>
+          <span>
+            <span class="video-en">The Framework of the Toyota Production System</span>
+            <span class="video-de" lang="de">Das Grundgerüst des Toyota-Produktionssystems</span>
+          </span>
+          <span class="video-play">▶</span>
+        </button>
+
+        <!-- 第一章新视频：复制上面整个 <button> ... </button> 粘贴在这里 -->
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- VIDEO PLAYER -->
+
+  <div class="player" id="player" hidden>
+    <div class="player-box">
+      <div class="player-frame" id="player-frame"></div>
+      <div class="player-bar">
+        <div class="player-title" id="player-title"></div>
+        <button class="player-close" id="player-close">Close ✕</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const player = document.getElementById('player');
+    const frame = document.getElementById('player-frame');
+    const title = document.getElementById('player-title');
+
+    document.querySelectorAll('.video-item[data-video]').forEach(function (item) {
+      item.addEventListener('click', function () {
+        const id = item.dataset.video;
+        frame.innerHTML =
+          '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+          '?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+        title.textContent =
+          item.querySelector('.video-no').textContent + '  ' +
+          item.querySelector('.video-en').textContent;
+        player.hidden = false;
+      });
+    });
+
+    function closePlayer() {
+      frame.innerHTML = '';
+      player.hidden = true;
+    }
+
+    document.getElementById('player-close').addEventListener('click', closePlayer);
+
+    player.addEventListener('click', function (e) {
+      if (e.target === player) closePlayer();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closePlayer();
+    });
+  </script>
+
+</body>
+</html>

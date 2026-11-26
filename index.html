@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Song Zhe — Personal Journal</title>
-  <meta name="description" content="A personal space for thoughts, experiences, professional work, travel and everyday life.">
+  <title>Song Zhe — Industrial Engineer</title>
+  <meta name="description" content="Song Zhe, Industrial Engineer based in Japan. Thinking about better ways of working.">
   <meta name="author" content="Song Zhe">
   <meta name="theme-color" content="#f7f5ef">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,51 +15,42 @@
   <style>
     :root {
       --bg: #f7f5ef;
-      --paper: #fcfbf7;
       --text: #35382f;
-      --muted: #858579;
-      --green: #77866e;
-      --green-light: #e9ece4;
+      --muted: #5c5d53;
+      --green: #66755d;
       --line: #e5e2d8;
       --serif: "EB Garamond", Georgia, serif;
       --sans: "Work Sans", Arial, sans-serif;
-      --width: 1080px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       background: var(--bg);
       color: var(--text);
       font-family: var(--sans);
-      font-size: 14px;
+      font-size: 15px;
       line-height: 1.8;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    button {
-      font: inherit;
-    }
+    main { width: min(920px, 88%); margin: 0 auto; }
 
-    .container {
-      width: min(var(--width), 88%);
-      margin: 0 auto;
-    }
+    section { padding: 52px 0; }
+
+    main section + section { border-top: 1px solid var(--line); }
+
+    h1, h2, h3 { font-family: var(--serif); font-weight: normal; line-height: 1.2; }
+
+    
+
+    h2 { font-size: 40px; margin-bottom: 24px; }
+
+    h3 { font-size: 22px; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
     /* NAVIGATION */
 
@@ -74,6 +64,8 @@
     }
 
     .navigation {
+      width: min(920px, 88%);
+      margin: 0 auto;
       min-height: 76px;
       display: flex;
       justify-content: space-between;
@@ -96,7 +88,7 @@
 
     .nav-links a {
       color: var(--muted);
-      font-size: 12px;
+      font-size: 15px;
       transition: color .2s;
     }
 
@@ -107,37 +99,26 @@
     /* HERO */
 
     .hero {
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      margin-right: calc(50% - 50vw);
-      padding: 125px max(40px, calc(50vw - 500px)) 110px;
-      min-height: 530px;
-      box-sizing: border-box;
-      background-image:
+      min-height: max(560px, calc(100vh - 77px));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px max(6%, calc(50% - 460px));
+      background:
         linear-gradient(
           to right,
-          rgba(247, 245, 239, 0.95) 0%,
-          rgba(247, 245, 239, 0.88) 40%,
-          rgba(247, 245, 239, 0.55) 70%,
-          rgba(247, 245, 239, 0.25) 100%
+          rgba(247, 245, 239, 0.97) 0%,
+          rgba(247, 245, 239, 0.92) 40%,
+          rgba(247, 245, 239, 0.55) 65%,
+          rgba(247, 245, 239, 0.08) 100%
         ),
-        url('/images/hero.jpg');
-      background-size: cover;
-      background-position: right center;
-      background-repeat: no-repeat;
-    }
-
-    .eyebrow {
-      color: var(--green);
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 30px;
+        url('/images/kaizen.jpg') center / cover no-repeat;
     }
 
     .hero h1 {
       font-family: var(--serif);
-      font-size: clamp(48px, 7vw, 82px);
+      font-size: clamp(42px, 6vw, 70px);
+      max-width: 680px;
       line-height: 1.12;
       font-weight: normal;
       letter-spacing: -1px;
@@ -156,417 +137,133 @@
       line-height: 2.1;
     }
 
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      margin-top: 38px;
-    }
+    /* VIDEOS */
 
-    .link-primary {
-      display: inline-block;
-      background: var(--green);
-      color: white;
-      padding: 12px 22px;
-      font-size: 11px;
-      letter-spacing: 1px;
-      transition: background .2s;
-    }
-
-    .link-primary:hover {
-      background: #5e7057;
-    }
-
-    .link-secondary {
-      color: var(--green);
-      font-size: 12px;
-      border-bottom: 1px solid var(--green);
-      padding-bottom: 3px;
-    }
-
-    /* GENERAL SECTIONS */
-
-    .section {
-      padding: 85px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 20px;
-      margin-bottom: 40px;
-    }
-
-    .section-number {
-      color: var(--green);
-      font-size: 10px;
-      letter-spacing: 2.5px;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      font-family: var(--serif);
-      font-size: 42px;
-      font-weight: normal;
-      letter-spacing: -1.5px;
-      line-height: 1.25;
-    }
-
-    .section-intro {
-      max-width: 460px;
-      color: var(--muted);
-      line-height: 2;
-      font-size: 13px;
-    }
-
-    /* ABOUT */
-
-    .about-layout {
+    .videos {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: stretch;
+      grid-template-columns: repeat(3, minmax(0, 220px));
+      gap: 24px;
     }
 
-    .about-main {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
+    .video-cover {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      background: #dde2d6;
+      margin-bottom: 14px;
     }
 
-    .about-copy {
-      color: #727268;
-      font-size: 14px;
-      line-height: 2.2;
-    }
-
-    .about-copy p + p {
-      margin-top: 18px;
-    }
-
-    .about-image {
-      display: block;
+    .video-cover img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top;
     }
 
-    .about-note {
-      padding: 30px;
-      background: var(--green-light);
-    }
-
-    .about-note h3 {
-      font-family: var(--serif);
-      font-size: 23px;
-      font-weight: normal;
-      margin-bottom: 15px;
-    }
-
-    .about-note p {
-      color: #697163;
-      font-size: 13px;
-      line-height: 2;
-    }
-
-    /* JOURNAL */
-
-    .journal-list {
-      border-top: 1px solid var(--line);
-    }
-
-    .journal-item {
+    .video-cover span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(53, 56, 47, 0.8);
+      color: white;
       display: grid;
-      grid-template-columns: 140px 1fr 30px;
-      align-items: center;
-      gap: 25px;
-      padding: 27px 5px;
-      border-bottom: 1px solid var(--line);
-      transition: padding .2s;
+      place-items: center;
+      padding-left: 3px;
     }
 
-    .journal-item:hover {
-      padding-left: 12px;
-      padding-right: 0;
-    }
+    .video p { color: var(--muted); font-size: 14px; }
 
-    .journal-category {
-      color: var(--green);
-      font-size: 10px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
+    .video:hover h3 { color: var(--green); }
 
-    .journal-item h3 {
-      font-family: var(--serif);
-      font-size: 23px;
-      font-weight: normal;
-      margin-bottom: 3px;
-    }
+    /* ARTICLES */
 
-    .journal-item p {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .journal-arrow {
-      color: var(--green);
-      font-size: 20px;
-    }
-
-    /* PROFESSIONAL */
-
-    .experience {
+    .post {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 30px;
-      padding: 25px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .experience:last-child {
-      border-bottom: 1px solid var(--line);
-    }
-
-    .experience-date {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .experience h3 {
-      font-family: var(--serif);
-      font-size: 23px;
-      font-weight: normal;
-      margin-bottom: 5px;
-    }
-
-    .experience p {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 35px;
-    }
-
-    .skill {
-      border: 1px solid #dcded4;
-      padding: 8px 14px;
-      color: #73786d;
-      font-size: 11px;
-      background: var(--paper);
-    }
-
-    /* LIFE */
-
-    .life-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .life-card {
-      min-height: 205px;
-      padding: 27px 23px;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform .2s, border-color .2s;
-    }
-
-    .life-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--green);
-    }
-
-    .life-card .card-number {
-      color: var(--green);
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
-
-    .life-card h3 {
-      font-family: var(--serif);
-      font-size: 25px;
-      font-weight: normal;
-      margin-bottom: 8px;
-    }
-
-    .life-card p {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    /* NOW */
-
-    .now-box {
-      max-width: 700px;
-      padding: 32px;
-      background: var(--green-light);
-    }
-
-    .now-box p {
-      color: #697163;
-      font-size: 13px;
-      line-height: 2.1;
-      margin-bottom: 12px;
-    }
-
-    .now-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    .updated {
-      color: var(--muted);
-      font-size: 10px;
-      margin-top: 18px;
-      letter-spacing: 1px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 38px 0;
-    }
-
-    .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      grid-template-columns: 120px 1fr;
+      align-items: baseline;
       gap: 20px;
+      padding: 22px 0;
+      border-top: 1px solid var(--line);
+      transition: color .2s;
     }
 
-    .footer-name {
-      font-family: var(--serif);
-      font-size: 20px;
-    }
+    .post:hover { color: var(--green); }
 
-    .footer-copy {
-      color: var(--muted);
-      font-size: 11px;
-    }
+    .post-date { color: var(--muted); font-size: 14px; }
 
-    .back-top {
+    .all-link {
+      display: block;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      text-align: right;
       color: var(--green);
-      font-size: 11px;
+      font-size: 13px;
     }
 
-    /* MOBILE */
+    /* ABOUT + EXPERIENCE */
+
+    .about {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .about img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 85% center;
+    }
+
+    .bio { margin-bottom: 30px; }
+
+    .job {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 20px;
+      padding: 18px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .job-date, .job p { color: var(--muted); font-size: 14px; }
 
     @media (max-width: 700px) {
-      .navigation {
-        min-height: 68px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 9px;
-        padding: 12px 0;
-      }
-
-      .nav-links {
-        gap: 17px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .nav-links a {
-        font-size: 11px;
-      }
+      .navigation { min-height: 68px; }
 
       .hero {
-        padding: 85px 24px 75px;
-        background-image:
+        padding: 56px 6%;
+        justify-content: flex-start;
+        background:
           linear-gradient(
-            rgba(247, 245, 239, 0.88),
-            rgba(247, 245, 239, 0.88)
+            rgba(247, 245, 239, 0.97) 0%,
+            rgba(247, 245, 239, 0.88) 45%,
+            rgba(247, 245, 239, 0.15) 75%,
+            rgba(247, 245, 239, 0) 100%
           ),
-          url('/images/hero.jpg');
+          url('/images/kaizen.jpg') center bottom / auto 70% no-repeat;
       }
 
-      .hero h1 {
-        letter-spacing: -2px;
-      }
+      .hero h1 { letter-spacing: -2px; }
 
-      .section {
-        padding: 60px 0;
-      }
+      section { padding: 38px 0; }
 
-      .section-heading {
-        display: block;
-      }
+      .about { grid-template-columns: 1fr; gap: 30px; }
 
-      .section-intro {
-        margin-top: 15px;
-      }
+      .about img { max-width: 360px; }
 
-      h2 {
-        font-size: 35px;
-      }
+      .job, .post { grid-template-columns: 1fr; gap: 4px; }
 
-      .about-layout {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .about-image {
-        height: auto;
-        aspect-ratio: 4 / 5;
-      }
-
-      .journal-item {
-        grid-template-columns: 1fr 25px;
-        gap: 7px;
-      }
-
-      .journal-category {
-        grid-column: 1;
-      }
-
-      .journal-item div:nth-child(2) {
-        grid-column: 1;
-      }
-
-      .journal-arrow {
-        grid-column: 2;
-        grid-row: 1 / span 2;
-      }
-
-      .experience {
-        grid-template-columns: 1fr;
-        gap: 7px;
-      }
-
-      .life-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .life-card {
-        min-height: 155px;
-      }
-
-      .footer-content {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .videos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *, *::before, *::after {
-        transition: none !important;
-      }
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
@@ -580,318 +277,103 @@
       <a href="#" class="logo">Song Zhe</a>
 
       <nav class="nav-links" aria-label="Main navigation">
+        <a href="#videos">Videos</a>
+        <a href="#articles">Articles</a>
         <a href="#about">About</a>
-        <a href="#journal">Journal</a>
-        <a href="#professional">Professional</a>
-        <a href="#life">Life</a>
-        <a href="#now">Now</a>
       </nav>
     </div>
   </header>
 
-  <main>
-
     <!-- HOME -->
 
-    <section class="container hero">
-      <div class="eyebrow">
-        A personal journal · Est. 2026
-      </div>
-
-      <h1>
-        A life of<br>
-        curiosity &<br>
-        <em>possibilities.</em>
-      </h1>
+    <section class="hero">
+      <h1>Thinking about better ways of <em>Kaizen.</em></h1>
 
       <p class="hero-description">
-        Hello, I'm Song Zhe. An Industrial Engineer by profession,
-        a curious mind by nature, and a lifelong learner.
-        This is my personal corner of the internet — a place
-        for thoughts, experiences, ideas and everything in between.
+        Song Zhe, Industrial Engineer. Short videos and articles
+        on Kaizen and continuous improvement.
       </p>
+    </section>
 
-      <div class="hero-actions">
-        <a href="#about" class="link-primary">
-          A LITTLE ABOUT ME
+  <main>
+
+    <!-- VIDEOS：每个系列一张卡片，首页最多 3 个。
+         系列里的新视频加到系列页面，首页不用改。 -->
+
+    <section id="videos">
+      <h2>Videos</h2>
+
+      <div class="videos">
+        <a class="video" href="/journal/kaizen-in-2-minutes/">
+          <!-- 封面：把 j2nzTpOY-Ro 换成该系列第一个视频的 YouTube ID（两处） -->
+          <div class="video-cover">
+            <img src="https://i.ytimg.com/vi/j2nzTpOY-Ro/oardefault.jpg" alt=""
+                 onload="if (this.naturalWidth <= 120) { this.onload = null; this.src = 'https://i.ytimg.com/vi/j2nzTpOY-Ro/hqdefault.jpg'; }"
+                 onerror="this.onerror = null; this.src = 'https://i.ytimg.com/vi/j2nzTpOY-Ro/hqdefault.jpg';">
+            <span aria-hidden="true">▶</span>
+          </div>
+          <h3>Kaizen in 2 Minutes</h3>
+          <p>8 chapters · English &amp; Deutsch</p>
         </a>
-
-        <a href="#journal" class="link-secondary">
-          Explore my journal →
-        </a>
       </div>
     </section>
 
 
-    <!-- ABOUT -->
+    <!-- ARTICLES：首页只放最新 3 篇。
+         新文章加在最上面，超过 3 篇时删掉最下面的一篇。
+         全部文章保存在 /journal/better-ways-of-working/ -->
 
-    <section class="section" id="about">
-      <div class="container">
+    <section id="articles">
+      <h2>Articles</h2>
 
-        <div class="section-heading">
-          <div>
-            <div class="section-number">01 / About me</div>
-            <h2>Behind the pages.</h2>
-          </div>
-        </div>
+      <a class="post" href="/journal/better-ways-of-working/equipment-efficiency.html">
+        <div class="post-date">November 2026</div>
+        <h3>Clear Roles, Shared Goals: How We Optimized Equipment Efficiency</h3>
+      </a>
 
-        <div class="about-layout">
-
-          <div class="about-main">
-            <div class="about-copy">
-              <p>
-                I'm Song Zhe, an Industrial Engineer with over
-                ten years of international experience in
-                manufacturing, production optimization and
-                operational excellence.
-              </p>
-
-              <p>
-                My professional journey has taken me through
-                different industries and countries. Working
-                with people from different backgrounds has
-                taught me to appreciate different perspectives
-                and ways of thinking.
-              </p>
-
-              <p>
-                Outside work, I'm interested in languages,
-                literature, travel, photography, culture and
-                the endless possibilities of learning something new.
-              </p>
-
-              <p>
-                I created this website to have a place of my own:
-                somewhere to document my journey, collect my thoughts
-                and share the things I find meaningful.
-              </p>
-            </div>
-
-            <div class="about-note">
-              <h3>A few things about me</h3>
-
-              <p>
-                Based in Japan, with an international outlook.
-                <br><br>
-                Interested in Germany, languages and different cultures.
-                <br><br>
-                Passionate about continuous improvement and lifelong learning.
-                <br><br>
-                Always curious about what comes next.
-              </p>
-            </div>
-          </div>
-
-          <img
-            class="about-image"
-            src="/images/about.jpg"
-            alt="A portrait of me"
-            loading="lazy"
-          >
-
-        </div>
-
-      </div>
+      <a class="all-link" href="/journal/better-ways-of-working/">All articles →</a>
     </section>
 
 
-    <!-- JOURNAL -->
+    <!-- ABOUT + EXPERIENCE -->
 
-    <section class="section" id="journal">
-      <div class="container">
+    <section id="about">
+      <div class="about">
 
-        <div class="section-heading">
-          <div>
-            <div class="section-number">02 / Journal</div>
-            <h2>Notes & reflections.</h2>
-          </div>
+        <img src="/images/about.jpg" alt="A portrait of Song Zhe">
 
-          <p class="section-intro">
-            A collection of thoughts, experiences and little
-            observations from everyday life. Some are about
-            work, some about the world, and some simply about being human.
+        <div>
+          <h2>Song Zhe</h2>
+
+          <p class="bio">
+            Industrial Engineer based in Japan, with over ten years of
+            international experience in manufacturing, production
+            optimization and operational excellence.
           </p>
-        </div>
 
-        <div class="journal-list">
-
-          <a class="journal-item" href="/journal/better-ways-of-working/">
-            <div class="journal-category">Ideas & work</div>
+          <div class="job">
+            <div class="job-date">2023 — Present</div>
             <div>
-              <h3>Thinking about better ways of working.</h3>
-              <p>Engineering, improvement and professional reflections.</p>
+              <h3>MISUMI Group</h3>
+              <p>Senior Improvement Engineer · Precision Manufacturing</p>
             </div>
-            <div class="journal-arrow">↗</div>
-          </a>
+          </div>
 
-          <a class="journal-item" href="#life">
-            <div class="journal-category">Everyday life</div>
+          <div class="job">
+            <div class="job-date">2020 — 2023</div>
             <div>
-              <h3>Finding meaning in ordinary moments.</h3>
-              <p>Small observations, personal stories and reflections.</p>
+              <h3>Michelin</h3>
+              <p>Senior Industrial Engineer · Industrial Performance</p>
             </div>
-            <div class="journal-arrow">↗</div>
-          </a>
+          </div>
 
-          <a class="journal-item" href="#life">
-            <div class="journal-category">Learning</div>
+          <div class="job">
+            <div class="job-date">2016 — 2020</div>
             <div>
-              <h3>A lifelong student of languages and cultures.</h3>
-              <p>Languages, books, new knowledge and discoveries.</p>
+              <h3>Jaguar Land Rover</h3>
+              <p>Industrial Engineer · Manufacturing &amp; Productivity</p>
             </div>
-            <div class="journal-arrow">↗</div>
-          </a>
-
-        </div>
-
-        <p class="updated">
-          PERSONAL NOTES · MORE WRITING COMING SOON
-        </p>
-
-      </div>
-    </section>
-
-
-    <!-- PROFESSIONAL -->
-
-    <section class="section" id="professional">
-      <div class="container">
-
-        <div class="section-heading">
-          <div>
-            <div class="section-number">03 / Professional journey</div>
-            <h2>Work & experience.</h2>
           </div>
-
-          <p class="section-intro">
-            A professional journey shaped by manufacturing,
-            international collaboration and a continuous
-            interest in making things better.
-          </p>
-        </div>
-
-        <div class="experience">
-          <div class="experience-date">2023 — Present</div>
-          <div>
-            <h3>MISUMI Group</h3>
-            <p>Senior Improvement Engineer · Precision Manufacturing</p>
-          </div>
-        </div>
-
-        <div class="experience">
-          <div class="experience-date">2020 — 2023</div>
-          <div>
-            <h3>Michelin</h3>
-            <p>Senior Industrial Engineer · Industrial Performance</p>
-          </div>
-        </div>
-
-        <div class="experience">
-          <div class="experience-date">2016 — 2020</div>
-          <div>
-            <h3>Jaguar Land Rover</h3>
-            <p>Industrial Engineer · Manufacturing & Productivity</p>
-          </div>
-        </div>
-
-        <div class="skills">
-          <span class="skill">Industrial Engineering</span>
-          <span class="skill">Lean Management</span>
-          <span class="skill">Operational Excellence</span>
-          <span class="skill">Process Optimization</span>
-          <span class="skill">Continuous Improvement</span>
-          <span class="skill">Production Digitalization</span>
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- LIFE -->
-
-    <section class="section" id="life">
-      <div class="container">
-
-        <div class="section-heading">
-          <div>
-            <div class="section-number">04 / Beyond work</div>
-            <h2>Life, in different chapters.</h2>
-          </div>
-
-          <p class="section-intro">
-            There is so much more to life than work.
-            Here are a few subjects I would love to explore
-            and document along the way.
-          </p>
-        </div>
-
-        <div class="life-grid">
-
-          <a href="#now" class="life-card">
-            <div class="card-number">01 / TRAVEL</div>
-            <div>
-              <h3>Places & journeys.</h3>
-              <p>New places, different cultures and memorable experiences.</p>
-            </div>
-          </a>
-
-          <a href="#now" class="life-card">
-            <div class="card-number">02 / READING</div>
-            <div>
-              <h3>Books & ideas.</h3>
-              <p>Books, literature, interesting ideas and reflections.</p>
-            </div>
-          </a>
-
-          <a href="#now" class="life-card">
-            <div class="card-number">03 / LANGUAGES</div>
-            <div>
-              <h3>Words & languages.</h3>
-              <p>Learning languages and discovering the world through words.</p>
-            </div>
-          </a>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- NOW -->
-
-    <section class="section" id="now">
-      <div class="container">
-
-        <div class="section-heading">
-          <div>
-            <div class="section-number">05 / Now</div>
-            <h2>At this moment.</h2>
-          </div>
-        </div>
-
-        <div class="now-box">
-          <p>
-            Currently based in Japan.
-          </p>
-
-          <p>
-            Learning German and exploring new professional
-            opportunities in Europe.
-          </p>
-
-          <p>
-            Continuing to learn, create, read and discover
-            new perspectives.
-          </p>
-
-          <p>
-            Building this little corner of the internet,
-            one page at a time.
-          </p>
-        </div>
-
-        <div class="updated">
-          LAST UPDATED: NOVEMBER 2026
         </div>
 
       </div>
@@ -899,27 +381,5 @@
 
   </main>
 
-
-  <!-- FOOTER -->
-
-  <footer>
-    <div class="container footer-content">
-
-      <div class="footer-name">
-        Song Zhe
-      </div>
-
-      <div class="footer-copy">
-        © 2026 Song Zhe · Made with curiosity and care.
-      </div>
-
-      <a href="#" class="back-top">
-        Back to top ↑
-      </a>
-
-    </div>
-  </footer>
-
 </body>
 </html>
-```
