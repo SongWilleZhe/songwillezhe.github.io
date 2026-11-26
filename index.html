@@ -275,6 +275,20 @@
       min-height: 0; aspect-ratio: auto; }
     @media (min-width: 701px) { .about h2 { margin-top: -0.18em; } }
     @media (max-width: 700px) { .about .photo { width: 180px; aspect-ratio: 4 / 5; } }
+
+    /* ===== 文章缩略图：上下边缘与文字对齐 ===== */
+    .post { grid-template-columns: 230px minmax(0, 1fr); gap: 22px; align-items: stretch; padding: 16px; }
+    .post-thumb { position: relative; display: block; min-height: 130px; border-radius: 6px; overflow: hidden; }
+    .post-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .post-body { display: flex; flex-direction: column; }
+    .post-body .post-date { line-height: 1; margin: -2px 0 8px; }
+    .post-body h3 { margin-bottom: 4px; }
+    .read-more { align-self: flex-start; margin-top: auto; line-height: 1; padding-bottom: 0; }
+    @media (min-width: 701px) and (max-width: 960px) { .post-excerpt { -webkit-line-clamp: 2; } }
+    @media (max-width: 700px) {
+      .post { grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 12px; }
+      .post-thumb { min-height: 0; aspect-ratio: 16 / 9; }
+    }
   </style>
   <script src="/lang.js"></script>
 </head>
@@ -344,8 +358,9 @@
   </h2>
 
   <article class="post">
-    <div class="post-date">November 26, 2026</div>
+    <a class="post-thumb" href="/journal/better-ways-of-working/ie-engineer-trust-formula.html" tabindex="-1" aria-hidden="true"><img src="/images/trustbuildin.jpg" alt="" width="2048" height="1152"></a>
     <div class="post-body">
+      <div class="post-date">November 26, 2026</div>
       <h3 lang="en"><a href="/journal/better-ways-of-working/ie-engineer-trust-formula.html">The IE Engineer’s Trust Formula: Shop-Floor Data + Professional Tools + Timely Alignment</a></h3>
       <h3 lang="de"><a href="/journal/better-ways-of-working/ie-engineer-trust-formula.html">Die Vertrauensformel für IE-Ingenieure: Daten vom Shopfloor + Fachwerkzeuge + rechtzeitiges Alignment</a></h3>
       <p class="post-excerpt" lang="en">Trust on the shop floor is not built by reports alone. This article shows how data, the right professional tools and timely alignment combine into a practical formula for IE engineers.</p>
@@ -357,8 +372,9 @@
   </article>
 
   <article class="post">
-    <div class="post-date">November 11, 2026</div>
+    <a class="post-thumb" href="/journal/better-ways-of-working/equipment-efficiency.html" tabindex="-1" aria-hidden="true"><img src="/images/teamwork.png" alt="" width="1672" height="941"></a>
     <div class="post-body">
+      <div class="post-date">November 11, 2026</div>
       <h3 lang="en"><a href="/journal/better-ways-of-working/equipment-efficiency.html">Clear Roles, Shared Goals: How We Optimized Equipment Efficiency</a></h3>
       <h3 lang="de"><a href="/journal/better-ways-of-working/equipment-efficiency.html">Klare Rollen, gemeinsame Ziele: Wie wir die Anlageneffizienz optimiert haben</a></h3>
       <p class="post-excerpt" lang="en">Equipment efficiency rarely improves through technical fixes alone. Here is how clear roles and shared goals changed the way the team worked.</p>
